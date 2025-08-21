@@ -15,8 +15,75 @@
       div {
         border: 1px solid black;
       }
+      .head{
+        background-color: white;
+        top: 0;
+        position: sticky;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
       .header {
+        max-width: 53%;
+        margin: auto;
         height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .drop{
+        width: 100%;
+      }
+      .header img{
+        height: 6vh;
+      }
+      .header ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        margin-right: 0;
+        width: 100%;
+      }
+      li{
+        float: right;
+        
+
+      }
+      li a, .drop-btn {
+        text-decoration: none;
+        display: inline-block;
+        color: rgb(4, 0, 255);
+        font-weight: bold;
+        text-align: center;
+        padding: 14px 16px;
+        font-size: 1.3rem;
+      }
+      li a:hover, .dropdown:hover, .drop-btn{
+        /* background-color: red; */
+      }
+      li .dropdown{
+        display: inline-block;
+        
+      }
+      .content{
+        display: none;
+        position: absolute;
+        background-color: rgba(219, 219, 219, 0.603);
+        min-width: 10%;
+        border-top: blue;
+        border: none;
+        z-index: 1;
+      }
+      .content a{
+        color: black;
+        padding: 3% 6%;
+        display: block;
+        text-align: left;
+      }
+      .content a:hover {
+        background-color: rgb(153, 153, 153);
+      }
+      .dropdown:hover .content{
+        display: block;
       }
       .body1 {
         text-align: left;
@@ -112,22 +179,27 @@
         display: grid;
         grid-template-columns: 2fr 2fr;
         padding-bottom: 10%;
+        column-gap: %;
+        row-gap: 1px;
       }
       .body3 div{
       }
       .body3 p{
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 1.5;
       }
       .body3 h1{
         font-size: 3rem;
+      }
+      .top{
+
       }
       .top h1{
         font-size: 4.5rem;
         margin-bottom: 0;
       }
       .top p{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         color: #666568;
       }
 
@@ -136,16 +208,96 @@
       }
       .body3 div:nth-child(3) {
         border-radius: 20px;
-        background-color: #5b83a1;
-        margin-inline: 30px;
+        background-color: #c2cace;
 
       }
       .body3 div:nth-child(3) img{
         border-radius: 20px;
-        height: 100px;
+        height: 20vh;
+      }
+      .b3-img1{
+
+      }
+      .b3img{
+        display: flex;
+        justify-content: center;
       }
       .body3-in{
+        
+      }
+      .b3b1{
+        max-width: 80%;
+        margin: auto;
+        padding: 10%;
+      }
+      .body3-img2 {
+        margin: auto;
+        background-color: #f7f770;
+        border-radius: 20px;
+        padding: 10%;
+        margin-top: 10%;
+        
+      }
+      .body3-img2img {
+        display: flex;
+        justify-content: center;
+      }
+      .body3-img2img img{
+        border-radius: 20px;
+        height: 27vh;
+      }
+      .body3-img2text{
+        margin: auto;
+      }
+      .body3-img2text p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+      .body3-img4 {
+        
+        margin: auto;
+        background-color: #ded5e8;
+        border-radius: 20px;
+        padding: 10%;
+        margin-top: 10%;
+      }
+      .body3-img4img {
+        display: flex;
+        justify-content: center;
+      }
+      .body3-img4img img{
+        border-radius: 20px;
+        height: 27vh;
+      }
+      .body3-img4text{
+        margin: auto;
+      }
+      .body3-img4text p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
 
+      .body3-img5 {
+        margin: auto;
+        background-color: #ded5e8;
+        border-radius: 20px;
+        padding: 10%;
+        margin-top: 10%;
+      }
+      .body3-img5img {
+        display: flex;
+        justify-content: center;
+      }
+      .body3-img5img img{
+        border-radius: 20px;
+        height: 27vh;
+      }
+      .body3-img5text{
+        margin: auto;
+      }
+      .body3-img5text p {
+        font-size: 1.6rem;
+        line-height: 1.5;
       }
       .body4{
         max-width: 53%;
@@ -212,7 +364,6 @@
         margin: auto;
       }
 
-      /* body1 */
       @media (max-width: 425px) {
         .body1 {
           height: fit-content;
@@ -239,16 +390,102 @@
         .body2{
             display: flex;
             flex-direction: column;
-            
+
         }
         .body2 img{
-            height: 25em;
+            height: 26em;
         }
         .body2-foot{
           display: flex;
           flex-direction: column;
         }
+        .body3{
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
+        }
+        .body3 img{
+          height: 13em;
+        }
+        .body4{
+          display: none;
+        }
+        .body5{
+          max-width: 80%;
+        }
+        .b5{
+          display: flex;
+          flex-direction: column;
+          max-width: 80%;
+        }
+        iframe{
+          height: 10em;
+          width: 80%;
+          margin: auto;
+          border-radius: 20px;
+        }
+        .body5-text h1{
+          font-size: 1rem;
+        }
+        .body5-text p{
+          font-size: 1rem;
+        }
       }
+      @media (max-width: 768px){
+        .b1{
+          width: 100%;
+        }
+        .body1 {
+          height: fit-content;
+          flex-direction: column;
+          max-width: 80%;
+          margin: auto;
+        }
+        .body1-text h1 {
+          font-size: 1.5rem;
+        }
+        .body1-text p {
+          font-size: 1.5rem;
+        }
+        .body1-text {
+          width: 100%;
+        }
+        .body1-text button {
+          padding: 1.3em 1.5em;
+        }
+        .b2{
+          padding-top: 10%;
+          max-width: 80%;
+        }
+        .body2{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .body2 img{
+            height: 26em;
+        }
+        .body2-foot{
+          display: flex;
+          flex-direction: column;
+        }
+        .body3{
+          display: flex;
+          flex-direction: column;
+          max-width: 80%;
+          padding-bottom: 100%
+        }
+        .body3 p{
+          font-size: ;
+        }
+        .body3 img{
+          height: 13em;
+        }
+        .body5-text h1{
+          font-size: 5rem;
+        }
+      }
+
       @media (max-wgiidth: 1110px) {
         .body1 {
           margin: auto;
@@ -292,31 +529,79 @@
   </head>
   <body>
     <div class="all">
-      <div class="header"></div>
-      <div class="body1">
-        <div class="body1-text">
-          <h1>Study to become a global talent</h1>
-          <p>
-            Learn new tech skills using a world-class curriculum from top
-            industry experts in an accredited institution.
-          </p>
-          <button>
-            <a href=""><b>Start Now</b></a>
-          </button>
+      <div class="head">
+        <div class="header">
+        <img src="../SQI/SQI/co.jpg" alt="" />
+        <div class="drop">
+          <ul>
+            <li class="dropdown">
+              <a class="drop-btn" href="">News</a>
+            </li>
+            <li class="dropdown">
+              <a class="drop-btn" href="">SQI Scholarship</a>
+            </li>
+            <li class="dropdown">
+              <a class="drop-btn" href="">E-Portal</a>
+              <div class="content">
+                <a href="">Student</a>
+                <a href="">Staff</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a class="drop-btn" href="">Admissions</a>
+              <div class="content">
+                <a href="">Apply for a Programme</a>
+                <a href="">Mode of Study</a>
+                <a href="">Tuition</a>
+                <a href="">Frequently Asked Questions</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a class="drop-btn" href="">Programmes</a>
+              <div class="content">
+                <a href="">National Diploma</a>
+                <a href="">National Innovation Diploma</a>
+                <a href="">Professional Diploma Program</a>
+                <a href="">Executive Professional Certificate Programme</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a class="drop-btn" href="">About</a>
+              <div class="content">
+                <a href="">Our Story</a>
+                <a href="">Our Team</a>
+                <a href="">Campus Info</a>
+              </div>
+            </li>
+          </ul>
         </div>
-        <img
-          src="https://edu.sqi.ng/wp-content/uploads/2023/06/bg-header-sqi-1.png"
-          alt=""
-        />
       </div>
+      </div>
+      
+      <section class="b1">
+        <div class="body1">
+          <div class="body1-text">
+            <h1>Study to become a global talent</h1>
+            <p>
+              Learn new tech skills using a world-class curriculum from top
+              industry experts in an accredited institution.
+            </p>
+            <button>
+              <a href=""><b>Start Now</b></a>
+            </button>
+          </div>
+          <img
+            src="https://edu.sqi.ng/wp-content/uploads/2023/06/bg-header-sqi-1.png"
+            alt=""
+          />
+        </div>
+      </section>
+
       <section class="b2">
         <h1>Start here. Change the world.</h1>
         <div class="body2">
           <div>
-            <img
-              src="../SQI/SQI/college (1).jpg"
-              alt=""
-            />
+            <img src="../SQI/SQI/college (1).jpg" alt="" />
             <h2>National Innovative Diploma (NID)</h2>
             <p>
               The National Diploma (ND) offered at SQI College of ICT is a 2
@@ -326,10 +611,7 @@
             <a href="">Learn More</a>
           </div>
           <div>
-            <img
-              src="../../Month 2/SQI/SQI/prof (1).jpg"
-              alt=""
-            />
+            <img src="../../Month 2/SQI/SQI/prof (1).jpg" alt="" />
             <h2>Professional Diploma Certificate</h2>
             <p>
               The Professional Certificate Program is 1 year practical training
@@ -339,10 +621,7 @@
             <a href="">Learn More</a>
           </div>
           <div>
-            <img
-              src="../../Month 2/SQI/SQI/certificate (1).jpg"
-              alt=""
-            />
+            <img src="../../Month 2/SQI/SQI/certificate (1).jpg" alt="" />
             <h2>Certificate Program</h2>
             <p>
               The Certificate Program is a short-term training, 2 weeks to 6
@@ -412,26 +691,99 @@
             <a href="">View all Courses</a>
           </div>
         </div>
-
-        <div></div>
+        <div class="body3-img2">
+          <div class="body3-img2in">
+            <div class="body3-img2img">
+              <img src="../SQI/SQI/DATA-SQI.jpg" alt="" />
+            </div>
+            <div class="body3-img2text">
+              <h1>Data Science & Analysis</h1>
+              <p>
+                The eruption of data is transforming indiviuals and businesses.
+                Companies either big or small are now expecting their business
+                decisions to be based on data-led insight. <br />
+                <br />Data specialists have a tremendous impact on business
+                strategies and marketing tactics because everyone now depends on
+                data to formulate improved strategies for the future of their
+                companies.
+              </p>
+              <a href="">Learn More</a>
+            </div>
+          </div>
+        </div>
         <div class="b3-img1">
-          <img
-            src="https://edu.sqi.ng/wp-content/uploads/2023/01/software-engineering-630x330-1.webp"
-            alt=""
-          />
-          <h1>Software Engineering</h1>
-          <p>
-            Software Engineering is one of the most in-demand jobs across the
-            globe today. <br />
-            <br />
-            Software Engineers are also known as programmers, developers or
-            coders. They are the ones behind all the apps and software you use
-            today either on your phone or computer within your browser. Software
-            such as banking apps, booking apps, mailing apps (e.g Gmail), Chat
-            apps (e.g WhatsApp) and other Social apps (e.g Twitter, Facebook)
-            and many more are created by software engineers.
-          </p>
-          <a href="">Learn More</a>
+          <div class="b3b1">
+            <div class="b3img">
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/01/software-engineering-630x330-1.webp"
+                alt=""
+              />
+            </div>
+
+            <h1>Software Engineering</h1>
+            <p>
+              Software Engineering is one of the most in-demand jobs across the
+              globe today. <br />
+              <br />
+              Software Engineers are also known as programmers, developers or
+              coders. They are the ones behind all the apps and software you use
+              today either on your phone or computer within your browser.
+              Software such as banking apps, booking apps, mailing apps (e.g
+              Gmail), Chat apps (e.g WhatsApp) and other Social apps (e.g
+              Twitter, Facebook) and many more are created by software
+              engineers.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+        </div>
+        <div class="body3-img4">
+          <div class="body3-img4in">
+            <div class="body3-img4img">
+              <img src="../SQI/SQI/digital-literacy.jpg" alt="" />
+            </div>
+            <div class="body3-img4text">
+              <h1>Digital Literacy</h1>
+              <p>
+                This course is designed to prepare you for success in a modern
+                world full of computers—not only the traditional computers such
+                as desktop and notebook PCs but also computers that you interact
+                with in other places too, like your bank’s ATM or your
+                employer’s computerized cash register. In this course, you will
+                learn about the technologies that drive our computerized
+                society, including the Internet and local area networks (LANs).
+                <br />
+
+                Taking this course will help you become a digitally literate
+                person—that is, someone who understands how computer technology
+                fits into our modern society and knows how to navigate a variety
+                of computing environments.
+              </p>
+              <a href="">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="body3-img5">
+          <div class="body3-img5in">
+            <div class="body3-img5img">
+              <img src="../SQI/SQI/product.jpg" alt="" />
+            </div>
+            <div class="body3-img5text">
+              <h1>UI/UX – Product Design</h1>
+              <p>
+                More than ever before individuals and businesses are relying on
+                digital products and services. From online meeting tools to
+                finance, from e-commerce platforms to healthcare and food apps.
+                Making an intuitive digital product design is even more import
+                at this time as it determines the overall experience of the
+                users. <br />
+
+                Here, you’ll build your product design skillset from the bottom
+                up with lessons, mentorship sessions, and career advice from our
+                design professionals.
+              </p>
+              <a href="">Learn More</a>
+            </div>
+          </div>
         </div>
       </section>
       <section class="body4">
