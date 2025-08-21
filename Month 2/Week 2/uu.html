@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        
+        
+      }
+      .all{
+        background: url("./DSC_9054-scaled.jpg"), linear-gradient(to right, rgb(1, 1, 36) 40%, rgba(0, 0, 14, 0)) center/cover no-repeat;
+        /* border: solid; */
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      .body {
+        border: solid;
+        margin-inline: 300px;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+      }
+      h1{
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .oo{
+        width: 50%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .pp{
+        width: 60%;
+        
+      }
+      iframe{
+        border-radius: 20px;
+        height: 250px;
+        width: 450px;
+        
+      }
+      button{
+        padding: 21px 24px;
+        font-size: 16px;
+        border-radius: 12px;
+        border: none;
+        background-color: rgb(10, 14, 39);
+        color: white;
+
+      } 
+      p{
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      @media (max-width: 1300px) {
+        .body{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+       <div class="body">
+      <div class="oo">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/HgC6bjMbqpw?si=UUHsdOLQzRX_hUdU"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+        <div class="pp">
+        <h1>Take a Tour</h1>
+        <p>
+          Our campus is a living centre for innovation and creativity for
+          sustainability. We love showing students our campus and allowing them
+          to see, hear and feel the excitement that comes with being part of the
+          Central community which is an atmosphere that is open-minded, always
+          exciting, and filled with academic excellence.
+        </p>
+        <button>Apply Now</button>
+      </div>
+    </div> 
+    </div>
+  </body>
+</html>

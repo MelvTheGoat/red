@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .all {
+        background-image: url("https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2@1.5x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 350px;
+        height: 60vh;
+        text-align: center;
+        background-color: rgb(16, 19, 24);
+      }
+      .all a {
+        color: rgb(130, 166, 236);
+        text-decoration: none;
+      }
+      .all p {
+        color: rgb(158, 166, 171);
+      }
+      .eng {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 120px;
+        left: 950px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .py {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 230px;
+        left: 900px;
+      }
+      .esp {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 340px;
+        left: 880px;
+      }
+      .chi {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 450px;
+        left: 900px;
+      }
+      .port {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 560px;
+        left: 950px;
+      }
+      .nia {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 120px;
+        right: 950px;
+      }
+      .deu {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 230px;
+        right: 900px;
+      }
+      .fran {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 340px;
+        right: 880px;
+      }
+      .ita {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 450px;
+        right: 900px;
+      }
+      .arab {
+        /* border: solid black 3px; */
+        position: absolute;
+        width: 200px;
+        top: 560px;
+        right: 950px;
+      }
+
+      .solar {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+
+      .circle1 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 70vh;
+        width: 37%;
+        position: absolute;
+      }
+      .circle2 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 62.2vh;
+        width: 32.8%;
+        position: absolute;
+        top: 1000px;
+      }
+      .circle3 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 54.4vh;
+        width: 28.7%;
+        position: absolute;
+        top: 1050px;
+      }
+      .circle4 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 46.6vh;
+        width: 24.6%;
+        position: absolute;
+        top: 1100px;
+      }
+      .circle5 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 38.8vh;
+        width: 20.5%;
+        position: absolute;
+        top: 1150px;
+      }
+      .circle6 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 31.1vh;
+        width: 16.4%;
+        position: absolute;
+        top: 1200px;
+      }
+      .circle7 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 23.3vh;
+        width: 12.3%;
+        position: absolute;
+        top: 1250px;
+      }
+      .circle8 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 15.5vh;
+        width: 8.2%;
+        position: absolute;
+        top: 1300px;
+        background-size: 80px;
+        background-repeat: no-repeat;
+        background-position: top left;
+      }
+      .circle9 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 11.7vh;
+        width: 6.1%;
+        position: absolute;
+        top: 1325px;
+        background-image: url("https://www.slazzer.com/downloads/f094e02b-7118-11f0-817f-1754fb72e2f3/sun-transparent-background-11549877996b3hvaflom7_prev_ui.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .mer {
+        position: absolute;
+        top: 360px;
+        left: 420px;
+        z-index: 1;
+      }
+      .ven {
+        position: absolute;
+        top: 350px;
+        left: 285px;
+        z-index: 1;
+      }
+      .earth {
+        position: absolute;
+        top: 460px;
+        left: 255px;
+        z-index: 1;
+      }
+      .mars {
+        position: absolute;
+        top: 110px;
+        left: 395px;
+        z-index: 1;
+      }
+      .jup {
+        position: absolute;
+        top: 465px;
+        left: 395px;
+        z-index: 1;
+      }
+      .saturn {
+        position: absolute;
+        bottom: 330px;
+        right: 460px;
+        z-index: 1;
+      }
+      .ura {
+        position: absolute;
+        top: 580px;
+        left: 55px;
+        z-index: 1;
+      }
+      .nep {
+        position: absolute;
+        top: 175px;
+        right: 490px;
+        z-index: 1;
+      }
+
+      .design {
+        display: flex;
+        justify-content: center;
+      }
+      .fig {
+        position: absolute;
+      }
+      .tv {
+        position: absolute;
+        top: 550px;
+        border: solid rgb(18, 13, 9) 12px;
+        background-color: black;
+        height: 27vh;
+        width: 750px;
+        left: -300px;
+      }
+      .speak {
+        position: absolute;
+        top: 880px;
+        border: solid rgb(18, 13, 9) 12px;
+        background-color: rgb(174, 161, 151);
+        height: 27vh;
+        width: 80px;
+        left: -550px;
+        display: flex;
+        justify-content: center;
+      }
+      .c1 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 5.3vh;
+        width: 55.2%;
+        top: 7px;
+        position: absolute;
+        background-color: black;
+      }
+      .c2 {
+        border: solid rgb(129, 128, 133) 3px;
+        border-radius: 70%;
+        height: 1.5vh;
+        width: 20.2%;
+        top: 34px;
+        position: absolute;
+        background-color: rgb(148, 146, 146);
+      }
+      .c3 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 5.3vh;
+        width: 80.2%;
+        top: 95px;
+        position: absolute;
+        background-color: black;
+      }
+      .c4 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 1.5vh;
+        width: 20.2%;
+        top: 120px;
+        position: absolute;
+        background-color: rgb(148, 146, 146);
+      }
+      .c5 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 5.3vh;
+        width: 80.2%;
+        top: 175px;
+        position: absolute;
+        background-color: black;
+      }
+      .c6 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 1.5vh;
+        width: 20.2%;
+        top: 200px;
+        position: absolute;
+        background-color: rgb(148, 146, 146);
+      }
+      .c7 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 5.3vh;
+        width: 80.2%;
+        top: 255px;
+        position: absolute;
+        background-color: black;
+      }
+      .c8 {
+        border: solid rgb(113, 111, 122) 3px;
+        border-radius: 70%;
+        height: 1.5vh;
+        width: 20.2%;
+        top: 280px;
+        position: absolute;
+        background-color: rgb(148, 146, 146);
+      }
+      .dec {
+        position: absolute;
+        top: 990px;
+        /* border: groove rgb(18, 13, 9) 12px; */
+        border: 3px groove rgb(18, 13, 9);
+        background-color: black;
+        height: 2vh;
+        width: 200px;
+      }
+      .dec1 {
+        position: absolute;
+        top: 1050px;
+        /* border: groove rgb(18, 13, 9) 12px; */
+        border: 6px groove rgb(138, 135, 133);
+        background-color: black;
+        height: 2vh;
+        width: 150px;
+        left: 300px;
+      }
+      .dec2 {
+        position: absolute;
+        top: 1050px;
+        /* border: groove rgb(18, 13, 9) 12px; */
+        border: 6px groove rgb(18, 13, 9);
+        background-color: black;
+        height: 2vh;
+        width: 150px;
+        right: 100px;
+      }
+      .line1 {
+        background-color: gray;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        height: 0.3vh;
+        width: 50px;
+      }
+      .dot1 {
+        background-color: gray;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        height: 0.3vh;
+        width: 5px;
+      }
+      .line2 {
+        background-color: gray;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        height: 0.3vh;
+        width: 50px;
+      }
+      .dot2 {
+        background-color: gray;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        height: 0.3vh;
+        width: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <div class="body">
+        <h1 style="color: white; font-size: 38px">Wikipedia</h1>
+        <h3 style="color: white">The Free Encyclopedia</h3>
+      </div>
+      <div class="eng">
+        <a href=""><h2>English</h2></a>
+        <p style="font-size: 13">7,009,000+ articles</p>
+      </div>
+      <div class="py">
+        <a href=""><h2>Русский</h2></a>
+        <p>2 050 000+ статей</p>
+      </div>
+      <div class="esp">
+        <a href=""><h2>Español</h2></a>
+        <p>2.041.000+ artículos</p>
+      </div>
+      <div class="chi">
+        <a href=""><h2>日本語</h2></a>
+        <p>1,462,000+ 記事</p>
+      </div>
+      <div class="port">
+        <a href=""><h2>Português</h2></a>
+        <p>1.148.000+ artigos</p>
+      </div>
+      <div class="deu">
+        <a href=""><h2>Deutsch</h2></a>
+        <p>3.024.000+ Artikel</p>
+      </div>
+      <div class="fran">
+        <a href=""><h2>Français</h2></a>
+        <p>2 690 000+ articles</p>
+      </div>
+      <div class="nia">
+        <a href=""><h2>中文</h2></a>
+        <p>1,482,000+ 条目 / 條目</p>
+      </div>
+      <div class="ita">
+        <a href=""><h2>Italiano</h2></a>
+        <p>1.922.000+ voci</p>
+      </div>
+      <div class="arab">
+        <a href=""><h2>فارسی</h2></a>
+        <p>۱٬۰۴۳٬۰۰۰+ مقاله</p>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="solar">
+      <div class="circle1">
+        <div class="mer">
+          <img
+            src="https://www.slazzer.com/downloads/e0646693-70a0-11f0-bc80-07c6599f2f6d/mer_prev_ui.png"
+            style="height: 30px"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="circle2">
+        <div class="ven">
+          <img
+          src="https://www.slazzer.com/downloads/1f431d87-7119-11f0-817f-1754fb72e2f3/png-transparent-venus-earth-planet-solar-system-venus-sphere-astronomical-object-uranus_prev_ui.png"
+          style="height: 35px; alt="">
+        </div>
+      </div>
+      <div class="circle3">
+        <div class="earth">
+          <img
+          src="https://www.slazzer.com/downloads/8915d8cb-7119-11f0-bc80-07c6599f2f6d/earth_prev_ui.png"
+          style="height: 47px; alt="" />
+        </div>
+      </div>
+      <div class="circle4">
+        <div class="mars">
+          <img
+          src="https://www.slazzer.com/downloads/471eeed5-7119-11f0-bc80-07c6599f2f6d/png-clipart-moon-illustration-mercury-venus-planet-neptune-venus-sphere-venus-thumbnail_prev_ui.png"
+          style="height: 45px; alt="" />
+        </div>
+      </div>
+      <div class="circle5">
+        <div class="jup">
+          <img
+          src="https://www.slazzer.com/downloads/5f0be205-7119-11f0-bc80-07c6599f2f6d/Jupiter_%28transparent%29_prev_ui.png"
+          style="height: 65px; alt="" />
+        </div>
+      </div>
+      <div class="circle6">
+        <div class="saturn">
+          <img
+          src="https://www.slazzer.com/downloads/6d734eaf-7119-11f0-817f-1754fb72e2f3/6544426207b93738e1d5bbf6e3c7b569_prev_ui.png"
+          style="height: 62px; alt="" />
+        </div>
+      </div>
+      <div class="circle7">
+        <div class="ura">
+          <img
+          src="https://www.slazzer.com/downloads/6351374f-70a4-11f0-817f-1754fb72e2f3/png-transparent-solar-system-earth-planet-nine-planets-planets-beyond-neptune-uranus-ice-planet-jupiter_prev_ui.png"
+          style="height: 42px; alt="" />
+        </div>
+      </div>
+      <div class="circle8">
+        <div class="nep">
+          <img
+          src="https://www.slazzer.com/downloads/09ba84cd-7119-11f0-817f-1754fb72e2f3/planet-neptune-solar-system-earth-uranus-png-favpng-QtNp5W9z84QeASzsUj5V8vJJS_prev_ui.png"
+          style="height: 42px; alt="" />
+        </div>
+      </div>
+      <div class="circle9"></div>
+      <img
+        src="https://th.bing.com/th/id/R.df7dc7b0b4fb92e8e3b23274f842e6c3?rik=FahCuo7tzczkmA&pid=ImgRaw&r=0"
+        alt=""
+      />
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="design">
+      <img
+        src="https://i.pinimg.com/1200x/90/d9/a4/90d9a495c4f8e7d38a5d5b5cca79485c.jpg"
+        style="width: 1200px"
+        alt=""
+      />
+      <div class="fig">
+        <div class="tv"></div>
+        <div class="dec"></div>
+        <div class="dec1">
+          <div class="line1"></div>
+          <div class="dot1"></div>
+        </div>
+        <div class="dec2">
+          <div class="line2"></div>
+          <div class="dot2"></div>
+        </div>
+        <div class="speak">
+          <div class="c1"></div>
+          <div class="c2"></div>
+          <div class="c3"></div>
+          <div class="c4"></div>
+          <div class="c5"></div>
+          <div class="c6"></div>
+          <div class="c7"></div>
+          <div class="c8"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

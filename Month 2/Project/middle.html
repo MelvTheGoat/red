@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overlapping Cards Hover Effect</title>
+<style>
+.body4-slide {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 0; /* no gap so they overlap */
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  margin-left: -100px; /* overlap halfway */
+  background: #ccc;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.card:nth-child(1) { background: lightcoral; }
+.card:nth-child(2) { background: lightblue; }
+.card:nth-child(3) { background: lightgreen; }
+
+.card:hover {
+  z-index: 2; /* bring it forward */
+}
+
+/* Push next card away when previous is hovered */
+.card:nth-child(1):hover ~ .card:nth-child(2) {
+  transform: translateX(100px);
+}
+
+.card:nth-child(2):hover ~ .card:nth-child(3) {
+  transform: translateX(100px);
+}
+</style>
+</head>
+<body>
+
+  <div class="body4-slide">
+    <div class="container">
+  <div class="card">Card 1</div>
+  <div class="card">Card 2</div>
+  <div class="card">Card 3</div>
+</div>
+  </div>
+
+
+</body>
+</html>

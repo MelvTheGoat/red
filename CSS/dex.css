@@ -1,0 +1,18 @@
+.software{
+    background-color: #d6e7f9;
+    height: 620px;
+    padding: 35px;
+    padding-right: 87px;
+    width: 370px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.images{
+    padding: 50px;
+    text-align: center;
+    width: 1600px;
+    font-size: 14px;
+}
+.header{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 500px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .all {
+      /* background-color: #f3767c; */
+      height: 90vh;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 170px auto auto auto;
+      background-color: #1e1c1f;
+      gap: 40px;
+      height: 60vh;
+      padding: 10px;
+      width: 20%;
+      border-radius: 30px;
+      margin-inline: 30px;
+      padding: 55px;
+      color: white;
+    }
+
+    .green {
+      background-color: rgb(162, 175, 119);
+      grid-column: 1 / 5;
+      margin-top: 35px;
+      border-radius: 30px;
+    }
+    .row1,
+    .m1,
+    .m2,
+    .m3 {
+      background-color: rgb(17, 13, 14);
+    }
+    .row2 {
+      background-color: #58595b;
+    }
+
+    .row3 {
+      background-color: #58595b;
+    }
+
+    .row4 {
+      background-color: #58595b;
+    }
+
+    .row5,
+    .row6,
+    .row7,
+    .row8,
+    .row9,
+    .row10,
+    .row11,
+    .row12,
+    .row13,
+    .row14,
+    .row15,
+    .row16,
+    .row17 {
+      background-color: #58595b;
+    }
+    .row13 {
+      grid-row: span 2;
+      background-color: rgb(241, 90, 43);
+    }
+    .row14 {
+      grid-column: span 2;
+      place-items: center;
+    }
+    .container div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 70px;
+    }
+  </style>
+  <body></body>
+  <div class="all">
+    <div class="container">
+      <div class="green"></div>
+      <div class="row1">MC</div>
+      <div class="m1">M+</div>
+      <div class="m2">÷</div>
+      <div class="m3">X</div>
+      <div class="row2">7</div>
+      <div class="row3">8</div>
+      <div class="row4">9</div>
+      <div class="row5">-</div>
+      <div class="row6">4</div>
+      <div class="row7">5</div>
+      <div class="row8">6</div>
+      <div class="row9">+</div>
+      <div class="row10">1</div>
+      <div class="row11">2</div>
+      <div class="row12">3</div>
+      <div class="row13">=</div>
+      <div class="row14">0</div>
+      <div class="row15">.</div>
+    </div>
+  </div>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQI</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+      section,
+      div {
+        border: 1px solid black;
+      }
+      .header {
+        height: 8vh;
+      }
+      .body1 {
+        text-align: left;
+        margin: auto;
+        max-width: 53%;
+        color: rgb(1, 14, 66);
+        height: 53vh;
+        display: flex;
+        margin-bottom: 10em;
+      }
+      .body1-text {
+        width: 44%;
+      }
+      .body1-text h1 {
+        font-size: 5.9rem;
+        font-weight: 900;
+        margin-bottom: 0em;
+      }
+      .body1-text p {
+        font-size: 1.6rem;
+        line-height: 2;
+        margin-top: 0;
+        margin-bottom: 2em;
+      }
+      .body1-text a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+      .body1-text button {
+        border: none;
+        background-color: rgb(0, 33, 138);
+        padding: 1.5em 2.2em;
+        border-radius: 11px;
+      }
+      .b2 {
+        margin: auto;
+        max-width: 53%;
+      }
+      .body2 {
+        display: grid;
+        gap: 1%;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 10em;
+      }
+      .b2 h1{
+        font-size: 4rem;
+        color: rgb(1, 14, 66);
+      }
+      .b2 h2 {
+        font-size: 2.1rem;
+        color: rgb(1, 14, 66);
+      }
+      .b2 p {
+        font-size: 1.5rem;
+        color: rgb(91, 104, 119);
+        line-height: 1.5;
+        pad
+      }
+      .b2 a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgb(41, 53, 72);
+        padding-bottom: 2%;
+        font-size: 1.5rem;
+      }
+      .body2 img {
+        height: 310px;
+      }
+      .body2-foot {
+        display: grid;
+        gap: 1%;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 1.25rem;
+      }
+      .body2 img{
+        filter: grayscale(100%);
+      }
+      .body2-foot p {
+        color: rgb(91, 104, 119);
+        font-size: 1.6rem;
+        border-bottom: 2px solid rgb(102, 147, 177);
+        padding-bottom: 2%;
+      }
+
+      .body2-foot p:last-child {
+        border: none;
+      }
+      .body3{
+        margin: auto;
+        max-width: 53%;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding-bottom: 10%;
+      }
+      .body3 div{
+      }
+      .body3 p{
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+      .body3 h1{
+        font-size: 3rem;
+      }
+      .top h1{
+        font-size: 4.5rem;
+        margin-bottom: 0;
+      }
+      .top p{
+        font-size: 1.7rem;
+        color: #666568;
+      }
+
+      .top a{
+        font-size: 1.7rem;
+      }
+      .body3 div:nth-child(3) {
+        border-radius: 20px;
+        background-color: #5b83a1;
+        margin-inline: 30px;
+
+      }
+      .body3 div:nth-child(3) img{
+        border-radius: 20px;
+        height: 100px;
+      }
+      .body3-in{
+
+      }
+      .body4{
+        max-width: 53%;
+        margin: auto;
+      }
+      .body4-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: ;
+        column-gap: 5%;
+        row-gap: 0%;
+        padding-bottom: 10%;
+      }
+      .body4-grid img{
+        height: 60%;
+      }
+      .body5{
+
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+        background-image: url("https://edu.sqi.ng/wp-content/uploads/2020/08/DSC_9054-scaled.jpg");
+        height: 45vh;
+
+      }
+      .b5{
+        display: flex;
+        max-width: 50%;
+      }
+        iframe{
+        width: 50%;
+        height: 30px
+        border-radius: 20px;
+      }
+      .body5-text{
+        margin: auto;
+        width: 80%;
+        color: white;
+      }
+      .body5-text h1{
+        font-size: 4rem;
+      }
+      .body5-text p{
+        font-size: 1.7rem;
+      }
+      .b6-scroll{
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      .body7-grid{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          width: 65%;
+      }
+      .body7{
+        background-image: url("https://edu.sqi.ng/wp-content/uploads/2023/01/conference_image_15.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 400px auto;
+        height: 70vh;
+        max-width: 53%;
+        margin: auto;
+      }
+
+      /* body1 */
+      @media (max-width: 425px) {
+        .all{
+            width: 100%;
+        }
+        .body1 {
+          height: fit-content;
+          flex-direction: column;
+          max-width: 80%;
+          margin: auto;
+        }
+        .body1-text h1 {
+          font-size: 3.5rem;
+        }
+        .body1-text p {
+          font-size: 1.5rem;
+        }
+        .body1-text {
+          width: 100%;
+        }
+        .body1-text button {
+          padding: 1.3em 1.5em;
+        }
+        .body2{
+            display: flex;
+            flex-direction: column;
+        }
+        .body2 img{
+            height: 10px;
+        }
+      }
+      @media (max-width: 1110px) {
+        .body1 {
+          margin: auto;
+          height: fit-content;
+          flex-direction: column;
+          max-width: 80%;
+        }
+        .body1-text h1 {
+          font-size: .5rem;
+        }
+        .body1-text p {
+          font-size: 1.8rem;
+        }
+        .body1-text {
+          width: 100%;
+        }
+        .body1-text button {
+          padding: 1.5em 1.7em;
+        }
+      }
+      @media (max-width: 1446px) {
+        .body1 {
+            margin: auto;
+          height: fit-content;
+          max-width: 75%;
+        }
+        .body1-text h1 {
+          font-size: 5.5rem;
+        }
+        .body1-text p {
+          font-size: 1.8rem;
+        }
+        .body1-text {
+          width: 100%;
+        }
+        .body1-text button {
+          padding: 1.5em 1.7em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <div class="header"></div>
+      <div class="body1">
+        <div class="body1-text">
+          <h1>Study to become a global talent</h1>
+          <p>
+            Learn new tech skills using a world-class curriculum from top
+            industry experts in an accredited institution.
+          </p>
+          <button>
+            <a href=""><b>Start Now</b></a>
+          </button>
+        </div>
+        <img
+          src="https://edu.sqi.ng/wp-content/uploads/2023/06/bg-header-sqi-1.png"
+          alt=""
+        />
+      </div>
+      <section class="b2">
+        <h1>Start here. Change the world.</h1>
+        <div class="body2">
+          <div>
+            <img
+              src="https://edu.sqi.ng/wp-content/uploads/2023/06/college.jpg"
+              alt=""
+            />
+            <h2>National Innovative Diploma (NID)</h2>
+            <p>
+              The National Diploma (ND) offered at SQI College of ICT is a 2
+              year approved academic program of the National Board for Technical
+              Education (NBTE) and approved by the Federal Ministry of Education
+            </p>
+            <a href="">Learn More</a>
+          </div>
+          <div>
+            <img
+              src="https://edu.sqi.ng/wp-content/uploads/2023/06/prof.jpg"
+              alt=""
+            />
+            <h2>Professional Diploma Certificate</h2>
+            <p>
+              The Professional Certificate Program is 1 year practical training
+              with wide range of edge-cutting IT certification courses offered
+              in SQI College of ICT to people who want to advance their career.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+          <div>
+            <img
+              src="https://edu.sqi.ng/wp-content/uploads/2023/06/certificate.jpg"
+              alt=""
+            />
+            <h2>Certificate Program</h2>
+            <p>
+              The Certificate Program is a short-term training, 2 weeks to 6
+              months with a wide range of edge-cutting IT certification courses
+              offered in SQI College of ICT to people who want to advance their
+              careers.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+        </div>
+        <div class="body2-foot">
+          <div class="foot1">
+            <h2>NATIONAL DIPLOMA COURSES</h2>
+            <p><strong>Duration:</strong> 2 Years</p>
+            <p>
+              <strong>Certificate:</strong> Both National Diploma and
+              Professional Diploma.
+            </p>
+            <p>
+              <strong>Skills:</strong> Academic Institution recognized skills
+              and In-demand professional skills.
+            </p>
+            <p>
+              <strong>Entry Requirements:</strong> 120 min in JAMB, 5 Credits in
+              O-Level and Your passion
+            </p>
+            <p><strong>Required Hardware:</strong> (usually Laptop)</p>
+            <p><strong>Direct Entry:</strong> Yes (Any University)</p>
+            <p><strong>Transcript & Internship:</strong> Yes</p>
+            <p>
+              <strong>Access to Alumni Network and Opportunities:</strong> Yes.
+            </p>
+          </div>
+          <div class="foot2">
+            <h2>PROFESSIONAL DIPLOMA COURSES</h2>
+            <p><strong>Duration:</strong> 1 Year</p>
+            <p><strong>Courses Certificate:</strong> Professional Diploma</p>
+            <p><strong>Skills:</strong> In-demand professional skills</p>
+            <p><strong>Entry Requirements:</strong> Your passion</p>
+            <p><strong>Required Hardware:</strong> (usually Laptop)</p>
+            <p><strong>Direct Entry:</strong> Partially Yes (LAUTECH ODL)</p>
+            <p><strong>Transcript & Internship:</strong> Yes.</p>
+            <p>
+              <strong>Access to Alumni Network and Opportunities:</strong> Yes.
+            </p>
+          </div>
+          <div class="foot3">
+            <h2>CERTIFICATE PROGRAM</h2>
+            <p><strong>Duration:</strong> 2 weeks to 10 months</p>
+            <p><strong>Certificate:</strong> Certificate Program</p>
+            <p><strong>Skills:</strong> In-demand professional skills</p>
+            <p><strong>Entry Requirements:</strong> Your passion</p>
+            <p><strong>Required Hardware:</strong> (usually Laptop)</p>
+            <p><strong>Direct Entry:</strong> No</p>
+            <p><strong>Transcript & Internship:</strong> No</p>
+            <p>
+              <strong>Access to Alumni Network and Opportunities:</strong> Yes.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="body3">
+        <div class="body3-in">
+          <div class="top">
+            <h1>Our Top Courses</h1>
+            <p>Take a look at some of our popular courses</p>
+            <a href="">View all Courses</a>
+          </div>
+        </div>
+
+        <div></div>
+        <div class="b3-img1">
+          <img
+            src="https://edu.sqi.ng/wp-content/uploads/2023/01/software-engineering-630x330-1.webp"
+            alt=""
+          />
+          <h1>Software Engineering</h1>
+          <p>
+            Software Engineering is one of the most in-demand jobs across the
+            globe today. <br />
+            <br />
+            Software Engineers are also known as programmers, developers or
+            coders. They are the ones behind all the apps and software you use
+            today either on your phone or computer within your browser. Software
+            such as banking apps, booking apps, mailing apps (e.g Gmail), Chat
+            apps (e.g WhatsApp) and other Social apps (e.g Twitter, Facebook)
+            and many more are created by software engineers.
+          </p>
+          <a href="">Learn More</a>
+        </div>
+      </section>
+      <section class="body4">
+        <div>
+          <h1>
+            Our alumni work at world-class companies around the world including
+          </h1>
+          <div class="body4-grid">
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/google.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/Interswitch.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/Andela-log-landscape-blue-400px.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/Microsoft_logo.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/Paystack.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/brewery.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/Wema-Bank-Logo.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/clan-logo.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/edozzier.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/moneymie.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/Nigerian_Army.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://edu.sqi.ng/wp-content/uploads/2023/03/aella-credit.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="body5">
+        <div class="b5">
+          <iframe
+            src="https://www.youtube.com/embed/HgC6bjMbqpw?si=jkA4Q4-qDhokbZWk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="body5-text">
+            <h1>Take a Tour</h1>
+            <p>
+              Our campus is a living centre for innovation and creativity for
+              sustainability. We love showing students our campus and allowing
+              them to see, hear and feel the excitement that comes with being
+              part of the Central community which is an atmosphere that is
+              open-minded, always exciting, and filled with academic excellence.
+            </p>
+            <a href="">Apply Now</a>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials">
+        <h2>Testimonials</h2>
+        <p>Read what our current students and alumni have to say...</p>
+
+        <div class="testimonial-container">
+          <div class="card">
+            <h3>SQI College of ICT IBADAN</h3>
+            <p class="rating">⭐ 4.9</p>
+            <p>Based on 84 reviews powered by Google</p>
+            <button>Review us on Google</button>
+          </div>
+
+          <div class="card">
+            <h3>Omolola Omobolake</h3>
+            <p class="rating">⭐ 5</p>
+            <p>
+              Coming to SQI has made me believe that life has more to offer...
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Cherish Ordia</h3>
+            <p class="rating">⭐ 5</p>
+            <p>It is a great place to learn...</p>
+          </div>
+        </div>
+      </section>
+      <section class="body7">
+        <div class="body7-grid">
+          <div>
+            <h1>Why study at SQI?</h1>
+          </div>
+          <div>
+            Project Based Learning Our courses are practical, hands-on learning.
+            Practice and apply knowledge with real world projects that
+            contribute largely to your portfolio.
+          </div>
+          <div>
+            Expert Instructors Get to interact with different mentors and draw
+            from their loads of experience.
+          </div>
+          <div>
+            Physical & Virtual Class You can now choose physical class
+            experience or online classroom and learn from anywhere in the world.
+          </div>
+          <div>
+            Free access to our hub and community You will have access to our
+            fully functional hub for co-working and working on projects,
+            assignments and even begin a start-up.
+          </div>
+          <div>
+            Certification Be certified by an accredited and globally recognized
+            institution. SQI got its accreditation in Sept 2021 from the NBTE,
+            Nigeria.
+          </div>
+          <div>
+            Alumni Support Our students have access to alumni who currently work
+            at top tech organizations in the world such as Google, Microsoft,
+            Interswitch etc.
+          </div>
+          <div>
+            Job Opportunity 78.5% of our students found secure employment within
+            three months of graduation. Students leave from learning to getting
+            job roles
+          </div>
+          <div>
+            Access to study materials Students have access to prerecorded videos
+            and resources they can make use of to further solidify their
+            knowledge.
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

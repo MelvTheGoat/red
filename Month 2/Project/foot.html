@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Base styles */
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px 15px;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        background: #333;
+      }
+
+      .dropdown > a {
+        background: #333;
+      }
+
+      /* First dropdown (options under Enter) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #444;
+        min-width: 150px;
+      }
+
+      .dropdown:hover > .dropdown-content {
+        display: block;
+      }
+
+      /* Style for Option 1 and Option 2 containers */
+      .sub-dropdown {
+        position: relative;
+        background: #555;
+      }
+
+      /* Second level (side dropdown) */
+      .sub-dropdown-content {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background: #666;
+        min-width: 150px;
+        white-space: nowrap;
+      }
+
+      /* Show submenu only for hovered item */
+      .sub-dropdown:hover > .sub-dropdown-content {
+        display: block;
+      }
+
+      /* Show Option 1 submenu by default when Enter is hovered */
+      .dropdown:hover .sub-dropdown:first-child .sub-dropdown-content {
+        display: block;
+      }
+
+      /* Hide Option 1 submenu when Option 2 is hovered */
+      .dropdown
+        .sub-dropdown:nth-child(2):hover
+        ~ .sub-dropdown:first-child
+        .sub-dropdown-content {
+        display: none;
+      }
+
+      /* Hover effects */
+      a:hover {
+        background: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="dropdown">
+        <a href="#">Enter</a>
+        <ul class="dropdown-content">
+          <li class="sub-dropdown">
+            <a href="#">Option 1</a>
+            <ul class="sub-dropdown-content">
+              <li><a href="#">Sub 1</a></li>
+              <li><a href="#">Sub 2</a></li>
+            </ul>
+          </li>
+          <li class="sub-dropdown">
+            <a href="#">Option 2</a>
+            <ul class="sub-dropdown-content">
+              <li><a href="#">Sub 3</a></li>
+              <li><a href="#">Sub 4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

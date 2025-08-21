@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .Raw {
+        display: flex;
+        margin: 50px auto;
+        justify-content: space-between;
+        width: 80%;
+        /* border: thin solid black; */
+        /* align-items: center; */
+        /* margin-top: 60px; */
+        /* padding-left: 90px; */
+      }
+
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+        line-height: 1;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .rawpan {
+        /* line-height: ; */
+        width: 50%;
+        /* border: thin solid red; */
+        padding: 20px;
+      }
+
+      .rawimg {
+        width: 50%;
+        /* border: thin solid black; */
+        /* line-height: 2; */
+      }
+
+      .rawimg img {
+        width: 480px;
+      }
+
+      button {
+        padding: 20px 30px;
+        background-color: blue;
+        border: 0;
+        color: white;
+        border-radius: 12px;
+      }
+
+      p {
+        margin-block: 30px;
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 980px) {
+        .Raw {
+          width: 80%;
+          /* border: thin solid black; */
+          flex-direction: column;
+        }
+
+        .rawpan {
+          width: 100%;
+        }
+
+        .rawimg {
+          width: 100%;
+        }
+      }
+      @media (max-width: 605px) {
+        .rawimg img {
+          width: 100%;
+        }
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Raw">
+      <div class="rawpan">
+        <h1>Study to become a global talent</h1>
+
+        <p>
+          Learn new tech skills using a world-class curriculum from top industry
+          experts in an accredited institution.
+        </p>
+        <button>start now</button>
+      </div>
+
+      <div class="rawimg">
+        <img src="https://edu.sqi.ng/wp-content/uploads/2023/06/bg-header-sqi-1.png" alt="sq.png" />
+      </div>
+    </div>
+  </body>
+</html>

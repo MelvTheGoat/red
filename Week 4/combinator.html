@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      background-color: #2e3748;
+      height: 40vh;
+    }
+
+    div label {
+        color: white;
+        font-size: 15px;
+        text-align: left;
+        padding: 30px;
+        gap: 30px;
+        
+
+    }
+
+    /* div + label {
+        background-color: red;
+    } */
+
+    .up, .rr, .pp, .ii{
+        background-color: #575f6c;
+        height: fit-content;
+        width: 700px;
+    }
+
+  </style>
+  <body>
+
+    <h1>Exercise</h1>
+          <p>
+            Which combinator selects elements that are direct children of a
+            specified element?
+          </p>
+          <div>
+                <div class="up">
+                    <label for="child">Child combinator (> )</label>
+                <input type="radio" name="dd" id="child" /> <br>
+                </div>
+                
+                <div class="pp">
+                    <label for="space">Descendant combinator (space)</label>
+                <input type="radio" name="dd" id="space" /> <br />
+
+                </div>
+                
+                <div class="ii">
+                    <label for="next">Next sibling combinator (+)</label>
+                <input type="radio" name="dd" id="next" /> <br />
+                </div>
+                
+
+                <div class="rr">
+                    <label for="sibling">Subsequent-sibling combinator (~)</label>
+                <input type="radio" name="dd" id="sibling" /> <br />
+                </div>
+                
+            
+            
+            
+                <!-- <label for="Submit">Submit Answer</label>
+                <input type="" name="dd" id="Submit" /> -->
+                <button>Submit Answer</button>
+        </div>
+    </div>
+  </body>
+</html>

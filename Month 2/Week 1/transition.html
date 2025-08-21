@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        width: 50%;
+        height: 70vh;
+        
+      }
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        width: 200px;
+        height: 200px;
+      }
+      .box1 {
+        background-color: rgb(27, 27, 73);
+        transition: width 2s, transform 2s;
+      }
+      .box1:hover {
+        width: 400px;
+        height: 400px;
+        transform: rotate(180deg);
+      }
+      .box2 {
+        background-color: rgb(238, 0, 0);
+        transition: width 2s;
+        right: 0px;
+        top: 0px;
+        position: absolute;
+      }
+      .box2:hover {
+        width: 400px;
+        height: 400px;
+        transform: width;
+      }
+
+      .box3 {
+        background-color: rgb(255, 0, 149);
+        left: 0px;
+        bottom: 0px;
+        position: absolute;
+      }
+      .box3:hover {
+        transition-property: background-color, height;
+        transition-duration: 2s;
+        background-color: darkcyan;
+        width: 400px;
+        height: 400px;
+      }
+      .box4 {
+        background-color: rgb(60, 255, 0);
+        transform: skew(45deg);
+        right: 0px;
+        bottom: 0px;
+        position: absolute;
+      }
+      .box4:hover {
+        transition-property: background-color;
+        transition-duration: 2s;
+        background-color: chocolate;
+        width: 400px;
+        height: 400px;
+        transform: width;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+    </div>
+  </body>
+</html>
