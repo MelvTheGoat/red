@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      section,
+      div {
+        /* border: 1px solid black; */
+        font-family: "Poppins", sans-serif;
+      }
+      .top {
+        max-width: 60%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 5%;
+      }
+      .top h1 {
+        font-size: 8rem;
+        padding-bottom: 0rem;
+      }
+      .top p {
+        font-size: 3rem;
+      }
+      .top button {
+        background-color: #6d47db;
+        border: none;
+        padding: 1.3% 3%;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+      }
+      .top-card {
+        max-width: 60%;
+        display: flex;
+        gap: 5%;
+        margin: auto;
+        padding-bottom: 5%;
+      }
+      .top-card div h1{
+        font-size: 2.5rem;
+      }
+      .top-card div{
+        max-width: 30%;
+      }
+      .top-card div p{
+        font-size: 1.5rem;
+      }
+      .privacy {
+        margin-top: 100px;
+        max-width: 60%;
+        display: flex;
+        /* justify-content: center; */
+
+        margin: auto;
+        background-color: #f7f6fb;
+        border-radius: 30px;
+      }
+      .privacy img {
+        height: 50vh;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+      .privacy div {
+        margin: auto;
+        max-width: 50%;
+      }
+      .privacy h1 {
+        font-size: 4.8rem;
+      }
+      .privacy p {
+        font-size: 2.1rem;
+      }
+      .help {
+        
+        max-width: 60%;
+        display: flex;
+        padding-bottom: 5%;
+
+        margin: auto;
+        background-color: #f7f6fb;
+        border-radius: 30px;
+      }
+      .help img {
+        height: 50vh;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      .help div {
+        margin: auto;
+        max-width: 50%;
+        
+      }
+      .help h1 {
+        font-size: 4.8rem;
+      }
+      .help p {
+        font-size: 2.1rem;
+      }
+      .mid {
+        max-width: 60%;
+        margin: auto;
+      }
+      .mid-card {
+        display: flex;
+        gap: 5%;
+      }
+      .mid-card div {
+        background-color: #f7f6fb;
+      }
+      .mid-end h1{
+        font-size: 5rem;
+      }
+      .mid-end p{
+        font-size: 2rem;
+      }
+      .mid-end img{
+        height: 80vh;
+        width: 100%;
+        padding-bottom: 10%;
+      }
+      .mid h1{
+        font-size: 4rem;
+      }
+      .mid p{
+        font-size: 2rem;
+      }
+      .mid-card div{
+        max-width: 30%;
+      }
+      .mid div h1{
+        font-size: 3rem;
+      }
+      .mid div p{
+        font-size: 1.5rem;
+      }
+      .thin {
+        /* background-image: url("../PalmPay/palm/footerBg.e4fed23a.png"); */
+        background: linear-gradient(to right, #381f7d 80%, #713ec9),
+          url("../PalmPay/palm/footerBg.e4fed23a.png");
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        background-blend-mode: multiply;
+
+        background-size: px;
+        background-position: bottom;
+        color: white;
+        font-size: 3rem;
+        padding: 2.5% 2.5%;
+      }
+      .thin div {
+        max-width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 4%;
+      }
+      .thin button {
+        background-color: #fdb800;
+        border: none;
+        padding: 1em;
+        border-radius: 14px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 1.7rem;
+      }
+      .img-end {
+        height: 3%;
+      }
+      .img-end img {
+        height: 4.5vh;
+      }
+      .end {
+        background-color: rgb(30, 30, 30);
+        color: #62625f;
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+      .end div {
+        max-width: 60%;
+        margin: auto;
+      }
+      .foot {
+        max-width: 100%;
+        background-color: rgb(30, 30, 30);
+        height: 46vh;
+      }
+      .footer {
+        padding-top: 2%;
+        margin: auto;
+        max-width: 60%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 5%;
+      }
+      .footer img {
+        height: 4.5%;
+        padding-bottom: 5%;
+      }
+      .footer p {
+        color: #bfbdba;
+        font-size: 1.5rem;
+      }
+      .footer h2 {
+        color: #ffffff;
+        font-size: 2.1rem;
+      }
+      .logo {
+        display: flex;
+        flex-direction: row;
+        gap: 8%;
+        height: 50em;
+        padding-top: 50%;
+      }
+      .foot-img p {
+        padding-top: 25%;
+      }
+      .mid-end {
+        margin: auto;
+        max-width: 60%;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <section></section>
+      <section class="top">
+        <h1>Unlock seamless <br>payment acceptance</h1>
+        <p>
+          Enable online and in-person transactions, expand across borders, and
+          effortlessly embrace emerging payment methods, all in one platform.
+        </p>
+        <button>Get Started</button>
+      </section>
+      <section class="top-card">
+        <div>
+          <h1>Simplify payments for business success</h1>
+          <p>
+            All-in-one platform for accepting and processing payments across all
+            sales channels.
+          </p>
+        </div>
+        <div>
+          <h1>Payment methods your customers prefer</h1>
+          <p>
+            Unleash market expansion and customer outreach. Seamlessly integrate
+            all payment methods with a single integration.
+          </p>
+        </div>
+        <div>
+          <h1>Optimize your revenue and conversion rate</h1>
+          <p>
+            Protect your business from fraud and increase authorization rates on
+            every payment
+          </p>
+        </div>
+      </section>
+      <section class="card">
+        <section class="help">
+          <div>
+            <h1>Get paid in-person with ease</h1>
+            <p>
+              Seamlessly accept card and bank transfer payments using PalmPay
+              POS, and supercharge your achievements with "Pay With Transfer" -
+              fast, secure transactions and unparalleled customer convenience.
+              Elevate your business game today!
+            </p>
+          </div>
+          <img src="../PalmPay/palm/WithEase.bd40dbb5.png" alt="" />
+        </section>
+        <section class="privacy">
+          <img src="../PalmPay/palm/OnlinePayments.301b795c.png" alt="" />
+
+          <div>
+            <h1>Online payments built for success</h1>
+            <p>
+              Level up your business with the ease of online payments,
+              accelerating transaction efficiency, and creating ecstatic
+              customers. Seamlessly receive payments from any Nigerian bank,
+              establishing your supremacy in payment acceptance - all in the
+              PalmPay Business app.
+            </p>
+            <br />
+          </div>
+        </section>
+      </section>
+      <section class="mid">
+        <h1>Tailored APIs for your complex needs</h1>
+        <p>
+          Choose tailor-made APIs solutions for your payment needs. Your smooth
+          transactions are our priority.
+        </p>
+        <div class="mid-card">
+          <div>
+            <h1>Connect</h1>
+            <p>Integrate payments with ease using our SDK/API.</p>
+          </div>
+          <div>
+            <h1>Bulk Biller Payment</h1>
+            <p>Manage batch transactions through a dedicated API.</p>
+          </div>
+          <div>
+            <h1>Bulk Transaction</h1>
+            <p>Effortlessly execute bulk transfers via API.</p>
+          </div>
+          <div>
+            <h1>Collection</h1>
+            <p>
+              Simplify direct debit and proxy payments for salaries or fees.
+            </p>
+          </div>
+          <div>
+            <h1>Pay with Bank Transfer</h1>
+            <p>
+              Experience temporary accounts for online payments (30-minute
+              validity).
+            </p>
+          </div>
+          <div>
+            <h1>Pay with Wallet</h1>
+            <p>Enjoy convenient wallet-based transactions.</p>
+          </div>
+        </div>
+      </section>
+      <section class="mid-end">
+        <h1>Manage the devices and payment all in one dashboard</h1>
+        <p>
+          PalmPay offers a comprehensive Dashboard for business to better
+          administration, monitor all your payment processing, and manage all
+          the POS devices, in one place.
+        </p>
+        <img src="./palm/Transactions.png" alt="" />
+      </section>
+      <section class="thin">
+        <div class="img-end">
+          <h1>Start accepting payments with <br>PalmPay today</h1>
+          <div>
+            <button>Get Started</button>
+          </div>
+        </div>
+      </section>
+      <section class="foot">
+        <div class="footer">
+          <div class="foot-img">
+            <img src="../PalmPay/palm/logoLight.c6470eab.png" alt="" />
+            <img
+              src="../../Month 2/PalmPay/palm/centralBank.e14647d7.png"
+              alt=""
+            />
+            <img src="../PalmPay/palm/PCI.61c854da.png" alt="" />
+            <img src="../PalmPay/palm/NDIC.2b6dc455.png" alt="" />
+            <img src="" alt="" />
+            <img src="../PalmPay/palm/NDPC.5e0c1fc1.png" alt="" />
+            <img src="../PalmPay/palm/fccpc.f0d93ef3.png" alt="" />
+            <p>© 2025 PalmPay. All rights reserved.</p>
+          </div>
+          <div>
+            <h2>Personal</h2>
+            <p>PalmPay App</p>
+            <p>Send and Receive Money</p>
+            <p>Bill Payment</p>
+            <p>Buy and Shop</p>
+          </div>
+          <div>
+            <h2>Business</h2>
+            <p>Payin</p>
+            <p>Payout</p>
+            <p>POS</p>
+            <p>Pay with Transfer</p>
+            <p>Business Account</p>
+            <p>Management</p>
+            <p>Agent Network</p>
+          </div>
+          <div>
+            <h2>Company</h2>
+            <p>About</p>
+            <p>Blog</p>
+            <p>Press and Media</p>
+            <p>Contact</p>
+          </div>
+          <div>
+            <h2>Legal</h2>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>Complaints</p>
+            <p>Loan Privacy Policy</p>
+            <div class="logo">
+              <img src="../PalmPay/palm/Instagram.402c19f4.png" alt="" />
+              <img src="../PalmPay/palm/Facebook.994376ce.png" alt="" />
+              <img src="../PalmPay/palm/XCorp.24c83d0b.png" alt="" />
+              <img src="../PalmPay/palm/LinkedIn.ffb330cb.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="end">
+        <div>
+          <p>
+            PalmPay is a financial service provided by PalmPay Limited, licensed
+            and regulated by the Central Bank of Nigeria (CBN). Deposits are
+            insured by the Nigerian Deposit Insurance Corporation (NDIC). Loan
+            services on PalmPay are provided by Flexi Microfinance Bank Limited,
+            licensed by the Central Bank of Nigeria (CBN). We empower
+            individuals and businesses with payments solutions, high-yield
+            investment opportunities, and easy-to-use tools for financial
+            management. We are a global company with a presence in Nigeria,
+            Ghana, Tanzania, and the United Kingdom.
+          </p>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

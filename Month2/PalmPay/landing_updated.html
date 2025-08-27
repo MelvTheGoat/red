@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PalmPay</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      section,
+      div {
+        /* border: 1px solid black; */
+        font-family: "Poppins", sans-serif;
+      }
+      .navbar {
+        background: #fff;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 60%;
+        margin: auto;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 10%;
+        margin: auto;
+        padding: auto;
+        font-size: 1.8rem;
+      }
+
+      .nav-links li {
+        position: relative;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding-bottom: ;
+        display: inline-block;
+      }
+
+      /* Blue line under header on hover */
+      .nav-links a:hover {
+        border-bottom: 3px solid blue;
+      }
+
+      /* Dropdown container */
+      .dropdown {
+        position: relative;
+      }
+
+      /* Mega menu (hidden by default) */
+      .mega-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        padding: 2rem;
+        display: none;
+        width: 100vw;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 100;
+      }
+
+      /* Grid inside dropdown */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      .menu-grid p {
+        margin: 0.5rem 0;
+        color: #444;
+      }
+
+      /* Show dropdown on hover */
+      .dropdown:hover .mega-menu {
+        display: block;
+      }
+
+      /* Right side controls */
+      .right-controls {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .login-btn {
+        background: #6c2bd9;
+        color: white;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Region Dropdown */
+      .region-dropdown {
+        position: relative;
+      }
+
+      .region-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #f5f5f5;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .region-btn img {
+        width: 20px;
+        height: auto;
+      }
+
+      .region-menu {
+        position: absolute;
+        top: 110%;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        padding: 1rem;
+        width: 220px;
+        display: none;
+        z-index: 200;
+      }
+
+      .region-menu h4 {
+        margin: 0 0 1rem;
+        color: gray;
+        font-weight: normal;
+      }
+
+      .region-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .region-option:hover {
+        background: #f5f5f5;
+      }
+
+      .region-option img {
+        width: 20px;
+        height: auto;
+      }
+
+      .region-dropdown:hover .region-menu {
+        display: block;
+      }
+      .body1 {
+        margin: auto;
+        max-width: 60%;
+        padding-bottom: 25%;
+      }
+      .body1 img {
+        height: 200px;
+      }
+      .b1 {
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 2%;
+      }
+      .img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1%;
+        padding-bottom: 2%;
+      }
+      .img img {
+        height: 50px;
+      }
+      .body1-foot img {
+        height: 25px;
+      }
+      .body1-foot {
+        text-align: center;
+      }
+      .body1-foot p {
+        display: inline;
+        font-size: 1.5rem;
+        color: rgb(138, 132, 145);
+      }
+      .body1-foot img {
+      }
+      .mid {
+        background-color: rgb(30, 30, 30);
+        padding-bottom: 10%;
+      }
+
+      .body2 {
+        position: relative;
+        max-width: 100%;
+        padding-bottom: 10%;
+      }
+
+      .body2-img1 img {
+        width: 60%;
+      }
+      .body2-img1 {
+        max-width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+      .body2-mid {
+        padding-top: 20%;
+        margin: auto;
+        color: white;
+        max-width: 60%;
+        display: block;
+        justify-content: center;
+        text-align: center;
+      }
+      .body2-mid h1 {
+        color: #d5befa;
+        font-size: 5rem;
+      }
+      .body2-mid p {
+        font-size: 2.2rem;
+      }
+      .body2-mid img {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+        width: 100%;
+      }
+
+      .body2-mid2 {
+        margin: auto;
+        color: white;
+        max-width: 60%;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 10%;
+      }
+      .body2-mid2 h1 {
+        color: #fec69d;
+        font-size: 5rem;
+      }
+      .body2-mid2 p {
+        font-size: 2.2rem;
+      }
+      .body2-mid2 img {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+        width: 100%;
+      }
+
+      .b2-h1 {
+        color: #ffbe96;
+      }
+      .foot {
+        max-width: 100%;
+        background-color: rgb(30, 30, 30);
+        height: 46vh;
+      }
+      .footer {
+        padding-top: 2%;
+        margin: auto;
+        max-width: 60%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+        column-gap: 5%;
+      }
+      .footer img {
+        height: 4.5%;
+        padding-bottom: 5%;
+      }
+      .footer p {
+        color: #bfbdba;
+        font-size: 1.5rem;
+      }
+      .footer h2 {
+        color: #ffffff;
+        font-size: 2.1rem;
+      }
+      .logo {
+        display: flex;
+        flex-direction: row;
+        gap: 8%;
+        height: 50em;
+        padding-top: 50%;
+      }
+      .foot-img p {
+        padding-top: 25%;
+      }
+      .privacy-body {
+        padding-top: 10%;
+        padding-bottom: 5%;
+      }
+      .privacy {
+        max-width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background-color: #f7f6fb;
+        border-radius: 30px;
+      }
+      .privacy img {
+        height: 50vh;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+      .privacy div {
+        margin: auto;
+        max-width: 50%;
+      }
+      .privacy h1 {
+        font-size: 4.8rem;
+      }
+      .privacy p {
+        font-size: 2.1rem;
+      }
+      .help-body {
+        padding-bottom: 5%;
+      }
+      .help {
+        margin-top: 100px;
+        max-width: 60%;
+        display: flex;
+        /* justify-content: center; */
+
+        margin: auto;
+        background-color: #f7f6fb;
+        border-radius: 30px;
+      }
+      .help img {
+        height: 50vh;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      .help div {
+        margin: auto;
+        max-width: 50%;
+      }
+      .help h1 {
+        font-size: 4.8rem;
+      }
+      .help p {
+        font-size: 2.1rem;
+      }
+      .card button {
+        background-color: #6d47db;
+        border: none;
+        padding: 3% 4%;
+        border-radius: 7px;
+      }
+      .card a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+      .thin {
+        /* background-image: url("../PalmPay/palm/footerBg.e4fed23a.png"); */
+        background: linear-gradient(to right, #381f7d 80%, #713ec9),
+          url("../PalmPay/palm/footerBg.e4fed23a.png");
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        background-blend-mode: multiply;
+
+        background-size: px;
+        background-position: bottom;
+        color: white;
+        font-size: 2.3rem;
+      }
+      .thin div {
+        max-width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 4%;
+      }
+      .img-end {
+        height: 3%;
+      }
+      .img-end img {
+        height: 4.5vh;
+      }
+      .end {
+        background-color: rgb(30, 30, 30);
+        color: #62625f;
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+      .end div {
+        max-width: 60%;
+        margin: auto;
+      }
+
+      /* --- FIX 1: prevent mega menu overflow --- */
+      .mega-menu {
+        width: 80vw; /* smaller than 100vw */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* --- FIX 2: simple vertical dropdowns --- */
+      .dropdown .content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 160px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        flex-direction: column;
+        z-index: 200;
+      }
+
+      .dropdown .content a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+      }
+
+      .dropdown .content a:hover {
+        background: #f5f5f5;
+      }
+
+      .dropdown:hover .content {
+        display: flex;
+      }
+
+      /* --- FIX 3: move "make financial" image upward --- */
+      .body2-img1 img {
+        width: 60%;
+        position: relative;
+        top: -80px; /* adjust upward */
+      }
+
+      /* --- FIX 4: remove extra spaces between sections --- */
+      .mid {
+        padding-bottom: 0; /* was 10% */
+      }
+
+      .body2 {
+        padding-bottom: 0; /* was 10% */
+      }
+
+      .body2-mid2 {
+        padding-bottom: 5%; /* reduced */
+      }
+
+      .thin {
+        margin-bottom: 0;
+        padding-bottom: 2%;
+      }
+
+      .foot {
+        margin-top: 0;
+      }
+      @media (max-width: 425px) {
+        .body1 {
+          max-width: 90%;
+        }
+        .b1 {
+          font-size: 2rem;
+        }
+        .mid {
+          max-width: 100%;
+        }
+        .mid h1 {
+          font-size: 2.5rem;
+        }
+        .mid p {
+          font-size: 1.5rem;
+        }
+        .body2-mid {
+          max-width: 90%;
+        }
+        .body2-mid2 {
+          padding-top: 10%;
+          max-width: 90%;
+        }
+        .body2-mid2 img {
+          height: 20vh;
+        }
+        .privacy {
+          display: flex;
+          flex-direction: column;
+          max-width: 90%;
+        }
+        .privacy h1 {
+          font-size: 2.5rem;
+        }
+        .privacy p {
+          font-size: 1.5rem;
+        }
+        .privacy div {
+          max-width: 80%;
+        }
+        .privacy img {
+          height: 30vh;
+          width: 100%;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 0;
+        }
+        .help {
+          display: flex;
+          flex-direction: column-reverse;
+          max-width: 90%;
+        }
+        .help h1 {
+          font-size: 2.5rem;
+        }
+        .help p {
+          font-size: 1.5rem;
+        }
+        .help div {
+          max-width: 80%;
+        }
+        .help img {
+          height: 30vh;
+          width: 100%;
+          border-top-right-radius: 20px;
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 0;
+        }
+        .help button {
+          padding: 1.3em 2em;
+        }
+        .thin {
+          margin: auto;
+
+          max-width: 90%;
+        }
+        .thin div {
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+        }
+        .thin h1 {
+          font-size: 2rem;
+        }
+        .thin img {
+          height: 1.5em;
+        }
+        .img-end {
+          width: 90%;
+        }
+        .img-end div {
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          justify-content: center;
+        }
+        .foot {
+          height: fit-content;
+        }
+        .footer {
+          padding-top: 5%;
+          margin: auto;
+          max-width: 85%;
+          display: flex;
+          flex-direction: column;
+        }
+        .footer img {
+          height: 4vh;
+        }
+        .end div {
+          max-width: 85%;
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="head">
+      <nav class="navbar">
+        <!-- Left Nav -->
+        <ul class="nav-links">
+          <li class="dropdown">
+            <a href="#">Personal</a>
+            <div class="mega-menu">
+              <h3>PalmPay For Business →</h3>
+              <p>
+                Our simple, all-in-one solution for payments, banking and
+                operations, helps businesses of all sizes to grow and succeed.
+              </p>
+
+              <div class="menu-grid">
+                <div>
+                  <h4>Terminals</h4>
+                  <p><b>POS</b><br />Accept payments with POS terminal</p>
+                  <p>
+                    <b>Pay with Transfer</b><br />Open Transfer Account in
+                    minutes
+                  </p>
+                </div>
+                <div>
+                  <h4>Payment</h4>
+                  <p><b>Payin</b><br />A single platform to accept payments</p>
+                  <p><b>Payout</b><br />Send payouts in real time</p>
+                </div>
+                <div>
+                  <h4>Business Account</h4>
+                  <p>All your needs in one account</p>
+                  <p><b>Management</b><br />One-stop management suite</p>
+                </div>
+                <div>
+                  <h4>Checkout <small>(Coming Soon)</small></h4>
+                  <h4>Payment Links <small>(Coming Soon)</small></h4>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Business</a>
+            <div class="mega-menu">
+              <h3>PalmPay For Business →</h3>
+              <p>
+                Our simple, all-in-one solution for payments, banking and
+                operations, helps businesses of all sizes to grow and succeed.
+              </p>
+
+              <div class="menu-grid">
+                <div>
+                  <h4>Terminals</h4>
+                  <p><b>POS</b><br />Accept payments with POS terminal</p>
+                  <p>
+                    <b>Pay with Transfer</b><br />Open Transfer Account in
+                    minutes
+                  </p>
+                </div>
+                <div>
+                  <h4>Payment</h4>
+                  <p><b><a href="./payin.html">Payin</a></b><br />A single platform to accept payments</p>
+                  <p><b>Payout</b><br />Send payouts in real time</p>
+                </div>
+                <div>
+                  <h4>Business Account</h4>
+                  <p>All your needs in one account</p>
+                  <p><b>Management</b><br />One-stop management suite</p>
+                </div>
+                <div>
+                  <h4>Checkout <small>(Coming Soon)</small></h4>
+                  <h4>Payment Links <small>(Coming Soon)</small></h4>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="drop-btn" href="">Company</a>
+            <div class="content">
+              <a href="#">About</a>
+              <a href="./blog.html">Blog</a>
+              <a href="">Press and Media </a>
+              <a href="">Contact </a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="drop-btn" href="">Developers</a>
+            <!-- <div class="content">
+              <a href="#"></a>
+              <a href="#"></a>
+              <a href=""></a>
+              <a href=""></a>
+            </div> -->
+          </li>
+          <li class="dropdown">
+            <a class="drop-btn" href="">Pricing</a>
+            <!-- <div class="content">
+              <a href=""></a>
+              <a href=""></a>
+              <a href=""></a>
+              <a href=""></a>
+            </div> -->
+          </li>
+        </ul>
+
+        <!-- Right Side Controls -->
+        <div class="right-controls">
+          <a href="./page2.html" class="login-btn">Log In</a>
+
+          <div class="region-dropdown">
+            <div class="region-btn">
+              <img src="https://flagcdn.com/w20/ng.png" alt="Nigeria Flag" />
+              Nigeria ▼
+            </div>
+            <div class="region-menu">
+              <h4>Select Region</h4>
+              <div class="region-option">
+                <img src="https://flagcdn.com/w20/ng.png" alt="Nigeria Flag" />
+                Nigeria
+              </div>
+              <div class="region-option">
+                <img src="https://flagcdn.com/w20/tz.png" alt="Tanzania Flag" />
+                Tanzania
+              </div>
+              <div class="region-option">
+                <img src="https://flagcdn.com/w20/gh.png" alt="Ghana Flag" />
+                Ghana
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="body-1">
+      <div class="body1">
+        <img
+          src="https://www.palmpay.com/_next/static/media/Slogan.42823a0f.png?w=3840&q=100"
+          alt=""
+        />
+        <p class="b1">
+          Seamlessly send and receive money, effortlessly pay your bills, shop
+          anywhere with ease, and take full <br />control of your finances - all
+          in PalmPay
+        </p>
+        <div class="img">
+          <img
+            src="https://www.palmpay.com/_next/static/media/googlePlayBlack.1a580bf8.png?w=384&q=100"
+            alt=""
+          />
+          <img
+            src="https://www.palmpay.com/_next/static/media/appStoreBlack.d61e6117.png?w=384&q=100"
+            alt=""
+          />
+        </div>
+        <div class="body1-foot">
+          <p>
+            Licenced by CBN as a MMO
+            <img
+              src="https://www.palmpay.com/_next/static/media/centralBankBlack.9c697f56.png?w=32&q=100"
+              alt=""
+            />
+          </p>
+          <p>
+            Deposits Insured by
+            <img
+              src="https://www.palmpay.com/_next/static/media/NDICBlack.ff0f2bf9.png?w=64&q=100"
+              alt=""
+            />
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="mid">
+      <section class="body2">
+        <div class="body2-img1">
+          <div></div>
+          <img
+            src="https://www.palmpay.com/_next/static/media/makeFinancial.16856f8a.png?w=3840&q=100"
+            alt=""
+          />
+        </div>
+
+        <div class="body2-mid">
+          <h1>Do more with your money</h1>
+          <p>
+            More than just transferring money. You can do all kinds of cool
+            stuff - pay you bills, make purchase, save and earn, all financial
+            needs in one PalmPay app.
+          </p>
+          <img
+            src="https://www.palmpay.com/_next/static/media/payBills.0efc6845.png?w=3840&q=100"
+            alt=""
+          />
+        </div>
+      </section>
+      <section class="body2-2nd">
+        <div class="body2-mid2">
+          <h1>Earn as you spend with rewards</h1>
+          <p>
+            With PalmPay, every expense becomes an opportunity to save. Unlock
+            exclusive discounts and cashback rewards with transaction you make.
+            Embrace cashless payment and make every payment count with PalmPay.
+          </p>
+          <img src="../PalmPay/palm/coupons.b7c11783.png" alt="" />
+        </div>
+      </section>
+    </section>
+    <section class="card">
+      <div class="privacy-body">
+        <section class="privacy">
+          <img src="../PalmPay/palm/NDIC.80dcf580.png" alt="" />
+          <div>
+            <h1>Your privacy and security is our top priority</h1>
+            <p>
+              PalmPay is fully licensed as a Mobile Money Operator by CBN, and
+              insured by NDIC. We manage customers' funds in compliance with all
+              application regulations. This means that our more than 30 million
+              users and millions of businesses are protected.
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="help-body">
+        <section class="help">
+          <div>
+            <h1>We are happy to help</h1>
+            <p>
+              Browse topics, find resources, or chat with customer service.
+              PalmPay support has answers to all your questions. Have an
+              inquiry, or need Customer Service assistance? <br /><br />
+              Call us: +234 2018886888 <br />Email: support@palmpay.com
+            </p>
+            <br />
+            <button><a href="">Contact</a></button>
+          </div>
+          <img src="../PalmPay/palm/HelpCenter.7adf53ab.png" alt="" />
+        </section>
+      </div>
+    </section>
+    <section class="thin">
+      <div class="img-end">
+        <h1>Join <b>35+ million</b> users who love PalmPay</h1>
+        <div>
+          <img src="../PalmPay/palm/googlePlay.84c90596.png" alt="" />
+          <img src="../PalmPay/palm/appStoreBlack.d61e6117.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="foot">
+      <div class="footer">
+        <div class="foot-img">
+          <img src="../PalmPay/palm/logoLight.c6470eab.png" alt="" />
+          <img
+            src="../../Month 2/PalmPay/palm/centralBank.e14647d7.png"
+            alt=""
+          />
+          <img src="../PalmPay/palm/PCI.61c854da.png" alt="" />
+          <img src="../PalmPay/palm/NDIC.2b6dc455.png" alt="" />
+          <img src="" alt="" />
+          <img src="../PalmPay/palm/NDPC.5e0c1fc1.png" alt="" />
+          <img src="../PalmPay/palm/fccpc.f0d93ef3.png" alt="" />
+          <p>© 2025 PalmPay. All rights reserved.</p>
+        </div>
+        <div>
+          <h2>Personal</h2>
+          <p>PalmPay App</p>
+          <p>Send and Receive Money</p>
+          <p>Bill Payment</p>
+          <p>Buy and Shop</p>
+        </div>
+        <div>
+          <h2>Business</h2>
+          <p>Payin</p>
+          <p>Payout</p>
+          <p>POS</p>
+          <p>Pay with Transfer</p>
+          <p>Business Account</p>
+          <p>Management</p>
+          <p>Agent Network</p>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <p>About</p>
+          <p>Blog</p>
+          <p>Press and Media</p>
+          <p>Contact</p>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <p>Privacy Policy</p>
+          <p>Terms & Conditions</p>
+          <p>Complaints</p>
+          <p>Loan Privacy Policy</p>
+          <div class="logo">
+            <img src="../PalmPay/palm/Instagram.402c19f4.png" alt="" />
+            <img src="../PalmPay/palm/Facebook.994376ce.png" alt="" />
+            <img src="../PalmPay/palm/XCorp.24c83d0b.png" alt="" />
+            <img src="../PalmPay/palm/LinkedIn.ffb330cb.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <section class="end">
+        <div>
+          <p>
+            PalmPay is a financial service provided by PalmPay Limited, licensed
+            and regulated by the Central Bank of Nigeria (CBN). Deposits are
+            insured by the Nigerian Deposit Insurance Corporation (NDIC). Loan
+            services on PalmPay are provided by Flexi Microfinance Bank Limited,
+            licensed by the Central Bank of Nigeria (CBN). We empower
+            individuals and businesses with payments solutions, high-yield
+            investment opportunities, and easy-to-use tools for financial
+            management. We are a global company with a presence in Nigeria,
+            Ghana, Tanzania, and the United Kingdom.
+          </p>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
+
+<!-- <section class="happy">
+      <div class="happy-body">
+        <div class="happy-text">
+          <h1>We are happy to help</h1>
+          <p>
+            Browse topics, find resources, or chat with customer service.
+            PalmPay support has answers to all your questions. Have an inquiry,
+            or need Customer Service assistance? Call us: +234 2018886888 Email:
+            support@palmpay.com
+          </p>
+          <button><a href="">Contact</a></button>
+        </div>
+        <div class="happy-img">
+          <img src="../PalmPay/palm/HelpCenter.7adf53ab.png" alt="" />
+        </div>
+      </div>
+    </section>
+ <section class="privacy">
+      <div class="privacy-body">
+        <div class="privacy-img">
+          <img src="../PalmPay/palm/NDIC.80dcf580.png" alt="" />
+        </div>
+        <div class="privacy-text">
+          <h1>
+            Your privacy and security is our top priority PalmPay is fully
+            licensed as a Mobile Money Operator by CBN, and insured by NDIC. We
+            manage customers' funds in compliance with all application
+            regulations. This means that our more than 30 million users and
+            millions of businesses are protected.
+          </h1>
+        </div>
+      </div>
+    </section> -->

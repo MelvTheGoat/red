@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PalmPay Style Mega Menu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: #fff;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+      }
+
+      /* Dropdown container */
+      .dropdown {
+        position: relative;
+      }
+
+      /* Mega menu (hidden by default) */
+      .mega-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        padding: 2rem;
+        display: none;
+        width: 80vw; /* wide like PalmPay */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 100;
+      }
+
+      .mega-menu h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .mega-menu p {
+        margin: 0.5rem 0;
+        color: #444;
+      }
+
+      /* Grid inside dropdown */
+      .menu-grid {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      .mega-menu h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      .mega-menu small {
+        color: gray;
+        font-size: 0.8rem;
+      }
+
+      /* Show dropdown on hover */
+      .dropdown:hover .mega-menu {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Personal</a></li>
+
+        <li class="dropdown">
+          <a href="#">Business</a>
+          <!-- Mega Dropdown -->
+          <div class="mega-menu">
+            <h3>PalmPay For Business →</h3>
+            <p>
+              Our simple, all-in-one solution for payments, banking and
+              operations, helps businesses of all sizes to grow and succeed.
+            </p>
+
+            <div class="menu-grid">
+              <div>
+                <h4>Terminals</h4>
+                <p><b>POS</b><br />Accept payments with POS terminal</p>
+                <p>
+                  <b>Pay with Transfer</b><br />Open Transfer Account in minutes
+                </p>
+              </div>
+              <div>
+                <h4>Payment</h4>
+                <p><b>Payin</b><br />A single platform to accept payments</p>
+                <p><b>Payout</b><br />Send payouts in real time</p>
+              </div>
+              <div>
+                <h4>Business Account</h4>
+                <p>All your needs in one account</p>
+                <p><b>Management</b><br />One-stop management suite</p>
+              </div>
+              <div>
+                <h4>Checkout <small>(Coming Soon)</small></h4>
+                <h4>Payment Links <small>(Coming Soon)</small></h4>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Developers</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

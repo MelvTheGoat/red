@@ -10,7 +10,7 @@
       }
       section,
       div {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         font-family: "Poppins", sans-serif;
       }
       .body {
@@ -164,13 +164,20 @@
         flex-direction: row;
         gap: 4%;
       }
-      @media (max-width:320px) {
-        .body{
-            display: flex;
-            flex-direction: column;
+      @media (max-width: 320px) {
+        .body {
+          display: flex;
+          flex-direction: column;
+          max-width: 90%;
+          gap: 10vh;
         }
-        .body-in{
-            max-width: 80%;
+        .store img {
+          width: 100%;
+          height: 4vh;
+        }
+        .end div {
+          max-width: 85%;
+          font-size: 1.2rem;
         }
       }
     </style>
@@ -230,7 +237,7 @@
           </p>
         </div>
         <div class="login">
-          <button>Login</button>
+          <button><a href="./login.html">Login</a></button>
         </div>
       </div>
     </section>

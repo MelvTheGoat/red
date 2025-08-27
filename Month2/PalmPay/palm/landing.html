@@ -13,87 +13,154 @@
         /* border: 1px solid black; */
         font-family: "Poppins", sans-serif;
       }
-      .header {
+      .navbar {
+        background: #fff;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         max-width: 60%;
         margin: auto;
-        height: 8vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
-      .drop{
-        width: 100%;
-      }
-      .header img{
-        height: 3vh;
-      }
-      .header ul{
+
+      .nav-links {
         list-style: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        /* margin-right: 0; */
-        width: 100%;
         display: flex;
-        justify-content: center;
-        
+        gap: 10%;
+        margin: auto;
+        padding: auto;
+        font-size: 1.8rem;
       }
-      li{
-        /* float: right; */
-        
+
+      .nav-links li {
+        position: relative;
       }
-      li a, .drop-btn {
+
+      .nav-links a {
         text-decoration: none;
-        display: inline-block;
-        color: rgb(4, 0, 255);
-        font-weight: bold;
-        text-align: center;
-        padding: 14px 16px;
-        font-size: 2rem;
-      }
-      li a:hover, .dropdown:hover, .drop-btn{
-        /* background-color: red; */
-      }
-      li .dropdown{
-        display: inline-block;
-        
-      }
-      .content{
-        display: none;
-        position: absolute;
-        background-color: rgba(219, 219, 219, 0.603);
-        min-width: 10%;
-        border-top: blue;
-        border: none;
-        z-index: 1;
-      }
-      .content a{
         color: black;
-        padding: 3% 6%;
-        display: block;
-        text-align: left;
-      }
-      .content a:hover {
-        background-color: rgb(153, 153, 153);
-      }
-      .dropdown:hover .content{
-        display: block;
-      }
-      .header button{
-        
-        background-color: #6d47db;
-        border: none;
-        padding: 0% 3%;
-        border-radius: 7px;
-      
-      }
-      .header button a{
-      
-        text-decoration: none;
-        color: white;
         font-weight: bold;
-        /* font-size: 1rem; */
-      
+        padding-bottom: ;
+        display: inline-block;
+      }
+
+      /* Blue line under header on hover */
+      .nav-links a:hover {
+        border-bottom: 3px solid blue;
+      }
+
+      /* Dropdown container */
+      .dropdown {
+        position: relative;
+      }
+
+      /* Mega menu (hidden by default) */
+      .mega-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        padding: 2rem;
+        display: none;
+        width: 100vw;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 100;
+      }
+
+      /* Grid inside dropdown */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      .menu-grid p {
+        margin: 0.5rem 0;
+        color: #444;
+      }
+
+      /* Show dropdown on hover */
+      .dropdown:hover .mega-menu {
+        display: block;
+      }
+
+      /* Right side controls */
+      .right-controls {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .login-btn {
+        background: #6c2bd9;
+        color: white;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Region Dropdown */
+      .region-dropdown {
+        position: relative;
+      }
+
+      .region-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #f5f5f5;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .region-btn img {
+        width: 20px;
+        height: auto;
+      }
+
+      .region-menu {
+        position: absolute;
+        top: 110%;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        padding: 1rem;
+        width: 220px;
+        display: none;
+        z-index: 200;
+      }
+
+      .region-menu h4 {
+        margin: 0 0 1rem;
+        color: gray;
+        font-weight: normal;
+      }
+
+      .region-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .region-option:hover {
+        background: #f5f5f5;
+      }
+
+      .region-option img {
+        width: 20px;
+        height: auto;
+      }
+
+      .region-dropdown:hover .region-menu {
+        display: block;
       }
       .body1 {
         margin: auto;
@@ -142,12 +209,10 @@
         padding-bottom: 10%;
       }
 
-      .body2-img1 img{
-        
+      .body2-img1 img {
         width: 60%;
-        
       }
-      .body2-img1{
+      .body2-img1 {
         max-width: 100%;
         margin: auto;
         display: flex;
@@ -217,7 +282,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         column-gap: 5%;
-        
       }
       .footer img {
         height: 4.5%;
@@ -231,7 +295,7 @@
         color: #ffffff;
         font-size: 2.1rem;
       }
-      .logo{
+      .logo {
         display: flex;
         flex-direction: row;
         gap: 8%;
@@ -315,19 +379,18 @@
         background-position: bottom;
         color: white;
         font-size: 2.3rem;
-        
       }
-      .thin div{
+      .thin div {
         max-width: 60%;
         margin: auto;
         display: flex;
         flex-direction: row;
         gap: 4%;
       }
-      .img-end{
+      .img-end {
         height: 3%;
       }
-      .img-end img{
+      .img-end img {
         height: 4.5vh;
       }
       .end {
@@ -336,7 +399,7 @@
         font-size: 1.5rem;
         line-height: 1.5;
       }
-      .end div{
+      .end div {
         max-width: 60%;
         margin: auto;
       }
@@ -344,53 +407,135 @@
   </head>
   <body>
     <section class="head">
-      <div class="header">
-        <img src="https://www.palmpay.com/_next/static/media/logo.e481427a.png?w=384&q=100" alt="">
-        <ul>
+      <nav class="navbar">
+        <!-- Left Nav -->
+        <ul class="nav-links">
           <li class="dropdown">
-            <a class="drop-btn" href="">Pricing</a>
-            <div class="content">
-              <a href="#" ></a>
-              <a href="#"></a>
-              <a href=""></a>
-              <a href=""></a>
+            <a href="#">Personal</a>
+            <div class="mega-menu">
+              <h3>PalmPay For Business →</h3>
+              <p>
+                Our simple, all-in-one solution for payments, banking and
+                operations, helps businesses of all sizes to grow and succeed.
+              </p>
+
+              <div class="menu-grid">
+                <div>
+                  <h4>Terminals</h4>
+                  <p><b>POS</b><br />Accept payments with POS terminal</p>
+                  <p>
+                    <b>Pay with Transfer</b><br />Open Transfer Account in
+                    minutes
+                  </p>
+                </div>
+                <div>
+                  <h4>Payment</h4>
+                  <p><b>Payin</b><br />A single platform to accept payments</p>
+                  <p><b>Payout</b><br />Send payouts in real time</p>
+                </div>
+                <div>
+                  <h4>Business Account</h4>
+                  <p>All your needs in one account</p>
+                  <p><b>Management</b><br />One-stop management suite</p>
+                </div>
+                <div>
+                  <h4>Checkout <small>(Coming Soon)</small></h4>
+                  <h4>Payment Links <small>(Coming Soon)</small></h4>
+                </div>
+              </div>
             </div>
+          </li>
           <li class="dropdown">
-            <a class="drop-btn" href="">Developers</a>
-            <div class="content">
-              <a href="#" ></a>
-              <a href="#"></a>
-              <a href=""></a>
-              <a href=""></a>
+            <a href="#">Business</a>
+            <div class="mega-menu">
+              <h3>PalmPay For Business →</h3>
+              <p>
+                Our simple, all-in-one solution for payments, banking and
+                operations, helps businesses of all sizes to grow and succeed.
+              </p>
+
+              <div class="menu-grid">
+                <div>
+                  <h4>Terminals</h4>
+                  <p><b>POS</b><br />Accept payments with POS terminal</p>
+                  <p>
+                    <b>Pay with Transfer</b><br />Open Transfer Account in
+                    minutes
+                  </p>
+                </div>
+                <div>
+                  <h4>Payment</h4>
+                  <p><b>Payin</b><br />A single platform to accept payments</p>
+                  <p><b>Payout</b><br />Send payouts in real time</p>
+                </div>
+                <div>
+                  <h4>Business Account</h4>
+                  <p>All your needs in one account</p>
+                  <p><b>Management</b><br />One-stop management suite</p>
+                </div>
+                <div>
+                  <h4>Checkout <small>(Coming Soon)</small></h4>
+                  <h4>Payment Links <small>(Coming Soon)</small></h4>
+                </div>
+              </div>
             </div>
+          </li>
           <li class="dropdown">
             <a class="drop-btn" href="">Company</a>
             <div class="content">
-              <a href="#">About</a>
-              <a href="#">Blog</a>
-              <a href="">Press and Media</a>
-              <a href="">Contact</a>
+              <a href="#">g</a>
+              <a href="#">d</a>
+              <a href="">a</a>
+              <a href="">a</a>
             </div>
+          </li>
           <li class="dropdown">
-            <a class="drop-btn" href="">Business</a>
+            <a class="drop-btn" href="">Developers</a>
             <div class="content">
-              <a href="" >j</a>
-              <a href="">ff</a>
-              <a href=""></a>
-              <a href=""></a>
-            </div>
-          <li class="dropdown">
-            <a class="drop-btn" href="">Personal</a>
-            <div class="content">
-              <a href="#" >j</a>
-              <a href="#">ff</a>
-              <a href=""></a>
+              <a href="#">q</a>
+              <a href="#">q</a>
+              <a href="">q</a>
               <a href=""></a>
             </div>
           </li>
+          <li class="dropdown">
+            <a class="drop-btn" href="">Pricing</a>
+            <div class="content">
+              <a href="#">q</a>
+              <a href="#">d</a>
+              <a href="">f</a>
+              <a href="">3</a>
+            </div>
+          </li>
         </ul>
-        <button><a href="">Log in</a></button>
-      </div>
+
+        <!-- Right Side Controls -->
+        <div class="right-controls">
+          <a href="#" class="login-btn">Log In</a>
+
+          <div class="region-dropdown">
+            <div class="region-btn">
+              <img src="https://flagcdn.com/w20/ng.png" alt="Nigeria Flag" />
+              Nigeria ▼
+            </div>
+            <div class="region-menu">
+              <h4>Select Region</h4>
+              <div class="region-option">
+                <img src="https://flagcdn.com/w20/ng.png" alt="Nigeria Flag" />
+                Nigeria
+              </div>
+              <div class="region-option">
+                <img src="https://flagcdn.com/w20/tz.png" alt="Tanzania Flag" />
+                Tanzania
+              </div>
+              <div class="region-option">
+                <img src="https://flagcdn.com/w20/gh.png" alt="Ghana Flag" />
+                Ghana
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </section>
     <section>
       <div class="body1">
@@ -436,12 +581,11 @@
         <div class="body2-img1">
           <div></div>
           <img
-          src="https://www.palmpay.com/_next/static/media/makeFinancial.16856f8a.png?w=3840&q=100"
-          alt=""
-          
-        />
+            src="https://www.palmpay.com/_next/static/media/makeFinancial.16856f8a.png?w=3840&q=100"
+            alt=""
+          />
         </div>
-        
+
         <div class="body2-mid">
           <h1>Do more with your money</h1>
           <p>
@@ -500,11 +644,9 @@
         <h1>Join <b>35+ million</b> users who love PalmPay</h1>
         <div>
           <img src="../PalmPay/palm/googlePlay.84c90596.png" alt="" />
-      <img src="../PalmPay/palm/appStoreBlack.d61e6117.png" alt="" />
+          <img src="../PalmPay/palm/appStoreBlack.d61e6117.png" alt="" />
         </div>
-      
       </div>
-      
     </section>
     <section class="foot">
       <div class="footer">
@@ -552,28 +694,28 @@
           <p>Complaints</p>
           <p>Loan Privacy Policy</p>
           <div class="logo">
-            <img src="../PalmPay/palm/Instagram.402c19f4.png" alt="">
-            <img src="../PalmPay/palm/Facebook.994376ce.png" alt="">
-            <img src="../PalmPay/palm/XCorp.24c83d0b.png" alt="">
-            <img src="../PalmPay/palm/LinkedIn.ffb330cb.png" alt="">
+            <img src="../PalmPay/palm/Instagram.402c19f4.png" alt="" />
+            <img src="../PalmPay/palm/Facebook.994376ce.png" alt="" />
+            <img src="../PalmPay/palm/XCorp.24c83d0b.png" alt="" />
+            <img src="../PalmPay/palm/LinkedIn.ffb330cb.png" alt="" />
           </div>
         </div>
       </div>
     </section>
     <section class="end">
       <div>
-         <p>
-        PalmPay is a financial service provided by PalmPay Limited, licensed and
-        regulated by the Central Bank of Nigeria (CBN). Deposits are insured by
-        the Nigerian Deposit Insurance Corporation (NDIC). Loan services on
-        PalmPay are provided by Flexi Microfinance Bank Limited, licensed by the
-        Central Bank of Nigeria (CBN). We empower individuals and businesses
-        with payments solutions, high-yield investment opportunities, and
-        easy-to-use tools for financial management. We are a global company with
-        a presence in Nigeria, Ghana, Tanzania, and the United Kingdom.
-      </p>
+        <p>
+          PalmPay is a financial service provided by PalmPay Limited, licensed
+          and regulated by the Central Bank of Nigeria (CBN). Deposits are
+          insured by the Nigerian Deposit Insurance Corporation (NDIC). Loan
+          services on PalmPay are provided by Flexi Microfinance Bank Limited,
+          licensed by the Central Bank of Nigeria (CBN). We empower individuals
+          and businesses with payments solutions, high-yield investment
+          opportunities, and easy-to-use tools for financial management. We are
+          a global company with a presence in Nigeria, Ghana, Tanzania, and the
+          United Kingdom.
+        </p>
       </div>
-     
     </section>
   </body>
 </html>
