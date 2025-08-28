@@ -165,6 +165,7 @@
       .body1 {
         margin: auto;
         max-width: 60%;
+        padding-top: 6%;
         padding-bottom: 25%;
       }
       .body1 img {
@@ -374,7 +375,6 @@
         font-weight: bold;
       }
       .thin {
-        /* background-image: url("../PalmPay/palm/footerBg.e4fed23a.png"); */
         background: linear-gradient(to right, #381f7d 80%, #713ec9),
           url("../PalmPay/palm/footerBg.e4fed23a.png");
         background-repeat: no-repeat;
@@ -476,12 +476,25 @@
       .foot {
         margin-top: 0;
       }
-      @media (max-width: 425px) {
+      @media (min-width: 425px) {
         .body1 {
           max-width: 90%;
         }
+        .body1 img{
+          height: 7vh;
+          
+        }
         .b1 {
-          font-size: 2rem;
+          font-size: 1.2rem;
+        }
+        .img img{
+          height: 4vh;
+        }
+        .body1-foot p{
+          font-size: 1.1rem;
+        }
+        .body1-foot img{
+          height: 1.5vh;
         }
         .mid {
           max-width: 100%;
@@ -492,8 +505,20 @@
         .mid p {
           font-size: 1.5rem;
         }
+        .body2{
+          max-width: 100%;
+        }
         .body2-mid {
-          max-width: 90%;
+          padding-top: 0;
+          max-width: 100%;
+        }
+        .body2-img1{
+          height: 20vh;
+          max-width: 100%;
+        }
+        .body2-mid img{
+          height: 20vh;
+          max-width: 100%;
         }
         .body2-mid2 {
           padding-top: 10%;
@@ -502,13 +527,19 @@
         .body2-mid2 img {
           height: 20vh;
         }
+        .card{
+          padding-bottom: 20%;
+        }
         .privacy {
           display: flex;
           flex-direction: column;
-          max-width: 90%;
+          max-width: 95%;
+        }
+        .privacy-body{
+          padding-bottom: 5%;
         }
         .privacy h1 {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
         .privacy p {
           font-size: 1.5rem;
@@ -517,7 +548,7 @@
           max-width: 80%;
         }
         .privacy img {
-          height: 30vh;
+          height: 40vh;
           width: 100%;
           border-top-right-radius: 20px;
           border-bottom-left-radius: 0;
@@ -525,10 +556,10 @@
         .help {
           display: flex;
           flex-direction: column-reverse;
-          max-width: 90%;
+          max-width: 95%;
         }
         .help h1 {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
         .help p {
           font-size: 1.5rem;
@@ -537,24 +568,25 @@
           max-width: 80%;
         }
         .help img {
-          height: 30vh;
+          height: 40vh;
           width: 100%;
           border-top-right-radius: 20px;
           border-top-left-radius: 20px;
           border-bottom-right-radius: 0;
         }
         .help button {
-          padding: 1.3em 2em;
+          padding: 1em 2.5em;
         }
         .thin {
           margin: auto;
 
-          max-width: 90%;
+          max-width: 100%;
         }
         .thin div {
           display: flex;
           flex-direction: column;
           width: 90%;
+          margin-left: 5%;
         }
         .thin h1 {
           font-size: 2rem;
@@ -577,7 +609,13 @@
         .footer {
           padding-top: 5%;
           margin: auto;
-          max-width: 85%;
+          max-width: 90%;
+          display: flex;
+          flex-direction: column;
+        }
+        .foot-img {
+          padding-top: 3%;
+          width: 40%;
           display: flex;
           flex-direction: column;
         }
@@ -587,6 +625,357 @@
         .end div {
           max-width: 85%;
           font-size: 1.2rem;
+        }
+        .logo img{
+          height: 3vh;
+        }
+      }
+      @media (min-width: 768px) {
+        div, section{
+          border: 1px solid black;
+        }
+        .body-1{
+          width: 100%;
+        }
+        .body1 {
+          margin: auto;
+          max-width: 90%;
+        }
+        .body1 img{
+          height: 15vh;
+          max-width: 100%;
+          
+        }
+        .b1 {
+          font-size: 1.2rem;
+          max-width: 90%;
+        }
+        .img img{
+          height: 4vh;
+        }
+        .body1-foot p{
+          font-size: 1.1rem;
+        }
+        .body1-foot img{
+          height: 1.5vh;
+        }
+        .mid {
+          max-width: 100%;
+        }
+        .mid h1 {
+          font-size: 3rem;
+        }
+        .mid p {
+          font-size: 1.6rem;
+        }
+        .body2{
+          max-width: 100%;
+          
+        }
+        .body2-mid {
+          padding-top: 0;
+          margin: auto;
+          width: 100%;
+        }
+        .body2-mid img{
+          width: 95%;
+        }
+        .body2-img1{
+          height: 20vh;
+          
+        }
+        .body2-mid img{
+          height: 40vh;
+          max-width: 95%;
+        }
+        .body2-mid2 {
+          padding-top: 10%;
+          max-width: 95%;
+        }
+        .body2-mid2 img {
+          height: 40vh;
+        }
+        .card{
+          padding-bottom: 20%;
+        }
+        .privacy {
+          display: flex;
+          flex-direction: column;
+          max-width: 95%;
+        }
+        .privacy-body{
+          padding-bottom: 5%;
+        }
+        .privacy h1 {
+          font-size: 2.5rem;
+        }
+        .privacy p {
+          font-size: 1.5rem;
+        }
+        .privacy div {
+          margin-left: 3%;
+          max-width: 80%;
+        }
+        .privacy img {
+          height: 70vh;
+          width: 100%;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 0;
+        }
+        .help {
+          display: flex;
+          flex-direction: column-reverse;
+          max-width: 95%;
+        }
+        .help h1 {
+          font-size: 2.5rem;
+        }
+        .help p {
+          font-size: 1.5rem;
+        }
+        .help div {
+          margin-left: 3%;
+          max-width: 80%;
+        }
+        .help img {
+          height: 70vh;
+          width: 100%;
+          border-top-right-radius: 20px;
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 0;
+        }
+        .help button {
+          padding: 1em 2.5em;
+        }
+        .thin {
+          margin: auto;
+
+          max-width: 100%;
+        }
+        .thin div {
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          margin-left: 5%;
+        }
+        .thin h1 {
+          font-size: 2.5rem;
+        }
+        .thin img {
+          
+          height: 1.7em;
+        }
+        .thin div :nth-child(2){
+          margin-left: 0;
+        }
+        .img-end {
+          width: 90%;
+        }
+        .img-end div {
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          justify-content: center;
+        }
+        .foot {
+          height: fit-content;
+        }
+        .footer {
+          padding-top: 5%;
+          margin: auto;
+          max-width: 90%;
+          display: flex;
+          flex-direction: column;
+        }
+        .foot-img {
+          padding-top: 3%;
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+        }
+        .footer img {
+          height: 6vh;
+        }
+        .end div {
+          max-width: 95%;
+          font-size: 1.2rem;
+        }
+        .logo img{
+          height: 3vh;
+        }
+      }
+      /* @media (min-width: 1024px) { */
+        div, section{
+          border: 1px solid black;
+        }
+        .body-1{
+          width: 100%;
+        }
+        .body1 {
+          margin: auto;
+          max-width: 90%;
+        }
+        .body1 img{
+          height: 15vh;
+          max-width: 100%;
+          
+        }
+        .b1 {
+          font-size: 1.2rem;
+          max-width: 90%;
+        }
+        .img img{
+          height: 4vh;
+        }
+        .body1-foot p{
+          font-size: 1.1rem;
+        }
+        .body1-foot img{
+          height: 1.5vh;
+        }
+        .mid {
+          max-width: 100%;
+        }
+        .mid h1 {
+          font-size: 3rem;
+        }
+        .mid p {
+          font-size: 1.6rem;
+        }
+        .body2{
+          max-width: 100%;
+          
+        }
+        .body2-mid {
+          padding-top: 0;
+          margin: auto;
+          width: 100%;
+        }
+        .body2-mid img{
+          width: 95%;
+        }
+        .body2-img1{
+          height: 20vh;
+          
+        }
+        .body2-mid img{
+          height: 40vh;
+          max-width: 95%;
+        }
+        .body2-mid2 {
+          padding-top: 10%;
+          max-width: 95%;
+        }
+        .body2-mid2 img {
+          height: 40vh;
+        }
+        .card{
+          padding-bottom: 20%;
+        }
+        .privacy {
+          display: flex;
+          flex-direction: column;
+          max-width: 95%;
+        }
+        .privacy-body{
+          padding-bottom: 5%;
+        }
+        .privacy h1 {
+          font-size: 2.5rem;
+        }
+        .privacy p {
+          font-size: 1.5rem;
+        }
+        .privacy div {
+          margin-left: 3%;
+          max-width: 80%;
+        }
+        .privacy img {
+          height: 70vh;
+          width: 100%;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 0;
+        }
+        .help {
+          display: flex;
+          flex-direction: column-reverse;
+          max-width: 95%;
+        }
+        .help h1 {
+          font-size: 2.5rem;
+        }
+        .help p {
+          font-size: 1.5rem;
+        }
+        .help div {
+          margin-left: 3%;
+          max-width: 80%;
+        }
+        .help img {
+          height: 70vh;
+          width: 100%;
+          border-top-right-radius: 20px;
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 0;
+        }
+        .help button {
+          padding: 1em 2.5em;
+        }
+        .thin {
+          margin: auto;
+
+          max-width: 100%;
+        }
+        .thin div {
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          margin-left: 5%;
+        }
+        .thin h1 {
+          font-size: 2.5rem;
+        }
+        .thin img {
+          
+          height: 1.7em;
+        }
+        .thin div :nth-child(2){
+          margin-left: 0;
+        }
+        .img-end {
+          width: 90%;
+        }
+        .img-end div {
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          justify-content: center;
+        }
+        .foot {
+          height: fit-content;
+        }
+        .footer {
+          padding-top: 5%;
+          margin: auto;
+          max-width: 90%;
+          display: flex;
+          flex-direction: column;
+        }
+        .foot-img {
+          padding-top: 3%;
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+        }
+        .footer img {
+          height: 6vh;
+        }
+        .end div {
+          max-width: 95%;
+          font-size: 1.2rem;
+        }
+        .logo img{
+          height: 3vh;
         }
       }
     </style>
@@ -599,38 +988,51 @@
           <li class="dropdown">
             <a href="#">Personal</a>
             <div class="mega-menu">
-              <h3>PalmPay For Business →</h3>
-              <p>
-                Our simple, all-in-one solution for payments, banking and
-                operations, helps businesses of all sizes to grow and succeed.
-              </p>
+              <div class="mega-inner">
+                <div class="menu-grid personal-grid">
+                  <!-- Intro text -->
+                  <div class="intro">
+                    <h3>PalmPay For You</h3>
+                    <p>
+                      30 million users trust PalmPay to make transfer, pay
+                      bills, and shop securely.
+                    </p>
+                  </div>
 
-              <div class="menu-grid">
-                <div>
-                  <h4>Terminals</h4>
-                  <p><b>POS</b><br />Accept payments with POS terminal</p>
-                  <p>
-                    <b>Pay with Transfer</b><br />Open Transfer Account in
-                    minutes
-                  </p>
-                </div>
-                <div>
-                  <h4>Payment</h4>
-                  <p><b>Payin</b><br />A single platform to accept payments</p>
-                  <p><b>Payout</b><br />Send payouts in real time</p>
-                </div>
-                <div>
-                  <h4>Business Account</h4>
-                  <p>All your needs in one account</p>
-                  <p><b>Management</b><br />One-stop management suite</p>
-                </div>
-                <div>
-                  <h4>Checkout <small>(Coming Soon)</small></h4>
-                  <h4>Payment Links <small>(Coming Soon)</small></h4>
+                  <!-- Column 1 -->
+                  <div class="col">
+                    <h4>PalmPay App</h4>
+                    <p>Send money, pay in-person and more</p>
+
+                    <h4>Buy and Shop</h4>
+                    <p>Pay easily at shops</p>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col">
+                    <h4>Send and Receive Money</h4>
+                    <p>Make transfer or get paid</p>
+
+                    <h4>Bill Payment</h4>
+                    <p>Pay bill and earn cashback</p>
+                  </div>
+
+                  <!-- Store badges -->
+                  <div class="stores">
+                    <img
+                      src="https://www.palmpay.com/_next/static/media/googlePlayBlack.1a580bf8.png?w=384&q=100"
+                      alt="Get it on Google Play"
+                    />
+                    <img
+                      src="https://www.palmpay.com/_next/static/media/appStoreBlack.d61e6117.png?w=384&q=100"
+                      alt="Download on the App Store"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </li>
+
           <li class="dropdown">
             <a href="#">Business</a>
             <div class="mega-menu">
@@ -651,7 +1053,10 @@
                 </div>
                 <div>
                   <h4>Payment</h4>
-                  <p><b><a href="./payin.html">Payin</a></b><br />A single platform to accept payments</p>
+                  <p>
+                    <b><a href="./payin.html">Payin</a></b
+                    ><br />A single platform to accept payments
+                  </p>
                   <p><b>Payout</b><br />Send payouts in real time</p>
                 </div>
                 <div>
