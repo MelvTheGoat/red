@@ -4,6 +4,7 @@
       section,
       div {
         /* border: 1px solid black; */
+        font-family: "Poppins", sans-serif;
       }
       .all {
         height: 100vh;
@@ -22,9 +23,9 @@
         padding-top: 1%;
         margin: auto;
         height: 5vh;
-        max-width: 80%;
+        max-width: 95%;
         display: grid;
-        grid-template-columns: 25% 50% 20% 20%;
+        grid-template-columns: 40% 40% 10% 20%;
         grid-template-rows: 1fr;
       }
       .header img {
@@ -32,8 +33,7 @@
       }
       .header div:nth-child(3) img{
         margin-top: 0;
-        height: 3vh;
-        =
+        height: 2.5vh;
       }
       .header div:nth-child(3){
 
