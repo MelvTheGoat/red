@@ -1,0 +1,184 @@
+      html {
+        font-size: 62.5%;
+      }
+      section,
+      div {
+        /* border: 1px solid black; */
+      }
+      .all {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:  linear-gradient(to right, blue, rgb(255, 121, 143));
+        /* background-color: #2f9ff1; */
+
+      }
+      .in {
+        margin: auto;
+        width: 70%;
+        background-color: white;
+      }
+      .header {
+        padding-top: 1%;
+        margin: auto;
+        height: 5vh;
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: 25% 50% 20% 20%;
+        grid-template-rows: 1fr;
+      }
+      .header img {
+        height: 5vh;
+      }
+      .header div:nth-child(3) img{
+        margin-top: 0;
+        height: 3vh;
+        =
+      }
+      .header div:nth-child(3){
+
+        place-self: center;
+      }
+      .header div:nth-child(4){
+        display: flex;
+        gap: 5%;
+      }
+      .header div:nth-child(4) img{
+        height: 4vh;
+      }
+      .header div:nth-child(4) p{
+        font-size: 1.3rem;
+      }
+      .body {
+        display: flex;
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+      .right-body-top {
+        display: flex;
+
+        background-image: url("./figma/Rectangle 4.png");
+        max-width: 100%;
+      }
+      .right-body-top h1 {
+        color: white;
+        font-size: 3rem;
+
+        margin: auto;
+      }
+      .right-body-top-mid {
+        padding-top: 1.5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20% 80%;
+      }
+      .right-body {
+        margin-left: auto;
+        width: 88%;
+        padding-right: 1%;
+      }
+      .right-body-top-mid img {
+        height: 20vh;
+      }
+      .right-body-top-mid h1 {
+        margin-top: 0;
+        font-size: 2.5rem;
+      }
+      .right-body-top-mid img {
+      }
+      .right-body-low-mid {
+        display: flex;
+        gap: 5%;
+      }
+      .right-body-low1-mid div:nth-child(1) {
+        grid-column: span 5;
+        text-align: left;
+      }
+      .right-body-low1-mid div:nth-child(7) {
+        grid-column: span 5;
+        background-image: url("./figma/Rectangle 9.png");
+        background-size: cover;
+        color: white;
+        background-repeat: no-repeat;
+        display: flex;
+      }
+      .right-body-low1-mid div:nth-child(7) h1 {
+        margin: auto;
+        font-size: 2rem;
+      }
+      .right-body-low1-mid div:nth-child(7) button {
+        font-size: 2.4rem;
+        place-self: center;
+        height: auto;
+        margin-right: 2%;
+        border-radius: 5px;
+      }
+      .right-body-low1-mid {
+        max-width: 70%;
+      }
+      .right-body-low1-mid img{
+        max-width: 80%;
+      }
+      .right-body-low1-mid {
+        row-gap: 15%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 10% 30% 30%;
+      }
+      .right-body-low1-mid h1 {
+        font-size: 3rem;
+        margin-top: 0;
+      }
+
+      .right-body-low2-mid {
+      }
+      .low2-in {
+        padding-top: 3%;
+        display: flex;
+        gap: 10%;
+        justify-content: center;
+      }
+      .left-body {
+        max-width: 30%;
+        margin: auto;
+      }
+      .left-bar {
+        border-radius: 10px;
+        box-shadow: 0 0 6px rgb(166, 166, 206);
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        place-items: center;
+      }
+      .left-bar div {
+        padding: 10%;
+      }
+      .left-bar div:nth-child(7) {
+        padding: 105%;
+        padding-bottom: 150%;
+      }
+      .right-body-low2-mid h1{
+        margin-top: 0;
+        font-size: 3rem;
+      }
+      .right-body-low2-mid{
+        width: 30%;
+
+      }
+      .right-body-low2-mid .low2-in:nth-child(2){
+        display: flex;
+        justify-content: center;
+        
+      }
+
+      .last-img {
+        display: flex;
+        justify-content: center;
+      }
+      .last{
+        border-radius: 10px;
+        box-shadow: 0 0 6px rgb(166, 166, 206);
+      }
+      .left-body{
+        
+      }
