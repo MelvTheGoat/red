@@ -41,13 +41,13 @@
         margin: auto;
         padding-bottom: 5%;
       }
-      .top-card div h1{
+      .top-card div h1 {
         font-size: 2.5rem;
       }
-      .top-card div{
+      .top-card div {
         max-width: 30%;
       }
-      .top-card div p{
+      .top-card div p {
         font-size: 1.5rem;
       }
       .privacy {
@@ -75,11 +75,13 @@
       .privacy p {
         font-size: 2.1rem;
       }
+      .help-all{
+        padding-bottom: 5%;
+      }
       .help {
-        
         max-width: 60%;
         display: flex;
-        padding-bottom: 5%;
+        
 
         margin: auto;
         background-color: #f7f6fb;
@@ -93,7 +95,6 @@
       .help div {
         margin: auto;
         max-width: 50%;
-        
       }
       .help h1 {
         font-size: 4.8rem;
@@ -106,36 +107,53 @@
         margin: auto;
       }
       .mid-card {
+        
+      }
+      .grid1{
+        margin: auto;
+        display: flex;
+        gap: 5%;
+        padding-bottom: 2%;
+      }
+      .grid1-box{
+        flex: 1;
+        background-color: #f7f6fb;
+      }
+      .grid2{
         display: flex;
         gap: 5%;
       }
-      .mid-card div {
+      .grid2-box{
+        flex: 1;
         background-color: #f7f6fb;
       }
-      .mid-end h1{
+      .mid-card div {
+        
+      }
+      .mid-end h1 {
         font-size: 5rem;
       }
-      .mid-end p{
+      .mid-end p {
         font-size: 2rem;
       }
-      .mid-end img{
+      .mid-end img {
         height: 80vh;
         width: 100%;
         padding-bottom: 10%;
       }
-      .mid h1{
+      .mid h1 {
         font-size: 4rem;
       }
-      .mid p{
+      .mid p {
         font-size: 2rem;
       }
-      .mid-card div{
-        max-width: 30%;
+      .mid-card div {
+
       }
-      .mid div h1{
+      .mid div h1 {
         font-size: 3rem;
       }
-      .mid div p{
+      .mid div p {
         font-size: 1.5rem;
       }
       .thin {
@@ -230,7 +248,7 @@
     <section>
       <section></section>
       <section class="top">
-        <h1>Unlock seamless <br>payment acceptance</h1>
+        <h1>Unlock seamless <br />payment acceptance</h1>
         <p>
           Enable online and in-person transactions, expand across borders, and
           effortlessly embrace emerging payment methods, all in one platform.
@@ -261,7 +279,8 @@
         </div>
       </section>
       <section class="card">
-        <section class="help">
+        <div class="help-all">
+          <section class="help">
           <div>
             <h1>Get paid in-person with ease</h1>
             <p>
@@ -273,7 +292,10 @@
           </div>
           <img src="../PalmPay/palm/WithEase.bd40dbb5.png" alt="" />
         </section>
-        <section class="privacy">
+        </div>
+        
+        <div class="privacy-all">
+          <section class="privacy">
           <img src="../PalmPay/palm/OnlinePayments.301b795c.png" alt="" />
 
           <div>
@@ -288,6 +310,8 @@
             <br />
           </div>
         </section>
+        </div>
+        
       </section>
       <section class="mid">
         <h1>Tailored APIs for your complex needs</h1>
@@ -296,34 +320,38 @@
           transactions are our priority.
         </p>
         <div class="mid-card">
-          <div>
-            <h1>Connect</h1>
-            <p>Integrate payments with ease using our SDK/API.</p>
+          <div class="grid1">
+            <div class="grid1-box">
+              <h1>Connect</h1>
+              <p>Integrate payments with ease using our SDK/API.</p>
+            </div>
+            <div class="grid1-box">
+              <h1>Bulk Biller Payment</h1>
+              <p>Manage batch transactions through a dedicated API.</p>
+            </div>
+            <div class="grid1-box">
+              <h1>Bulk Transaction</h1>
+              <p>Effortlessly execute bulk transfers via API.</p>
+            </div>
           </div>
-          <div>
-            <h1>Bulk Biller Payment</h1>
-            <p>Manage batch transactions through a dedicated API.</p>
-          </div>
-          <div>
-            <h1>Bulk Transaction</h1>
-            <p>Effortlessly execute bulk transfers via API.</p>
-          </div>
-          <div>
-            <h1>Collection</h1>
-            <p>
-              Simplify direct debit and proxy payments for salaries or fees.
-            </p>
-          </div>
-          <div>
-            <h1>Pay with Bank Transfer</h1>
-            <p>
-              Experience temporary accounts for online payments (30-minute
-              validity).
-            </p>
-          </div>
-          <div>
-            <h1>Pay with Wallet</h1>
-            <p>Enjoy convenient wallet-based transactions.</p>
+          <div class="grid2">
+            <div class="grid2-box">
+              <h1>Collection</h1>
+              <p>
+                Simplify direct debit and proxy payments for salaries or fees.
+              </p>
+            </div>
+            <div class="grid2-box">
+              <h1>Pay with Bank Transfer</h1>
+              <p>
+                Experience temporary accounts for online payments (30-minute
+                validity).
+              </p>
+            </div>
+            <div class="grid2-box">
+              <h1>Pay with Wallet</h1>
+              <p>Enjoy convenient wallet-based transactions.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -338,7 +366,7 @@
       </section>
       <section class="thin">
         <div class="img-end">
-          <h1>Start accepting payments with <br>PalmPay today</h1>
+          <h1>Start accepting payments with <br />PalmPay today</h1>
           <div>
             <button>Get Started</button>
           </div>
