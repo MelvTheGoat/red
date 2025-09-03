@@ -124,19 +124,12 @@ div {
   flex-direction: row;
   gap: 4%;
 }
-@media (max-width: 425px) {
+@media (0px <= width <= 425px) {
   .grid {
     display: flex;
     flex-direction: column;
     gap: 40px;
     max-width: 90%;
-  }
-  .footer {
-    display: flex;
-    flex-direction: column;
-  }
-  .foot-img {
-    height: 1.5%;
   }
   .top {
     width: 90%;
@@ -147,5 +140,132 @@ div {
   }
   .top p {
     font-size: 1.3rem;
+  }
+  .thin {
+  }
+  .thin img {
+    height: 3vh;
+  }
+  .thin div {
+    display: block;
+    max-width: 95%;
+  }
+  .thin h1 {
+    font-size: 2rem;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 95%;
+  }
+  .footer img {
+    max-width: 50%;
+    height: 6%;
+  }
+  .end {
+    padding-top: 300%;
+  }
+  .end div {
+    max-width: 95%;
+  }
+  .foot-img p {
+  }
+  .footer img {
+  }
+  .logo {
+    padding-top: 10%;
+  }
+  .logo img {
+    height: 2vh;
+  }
+}
+@media (426px <= width <= 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 90%;
+  }
+  .top {
+    width: 90%;
+    padding-bottom: 15%;
+  }
+  .top h1 {
+    font-size: 4rem;
+  }
+  .top p {
+    font-size: 2rem;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    margin-left: 3%;
+  }
+  .footer img {
+    max-width: 50%;
+    height: 6%;
+  }
+  .end {
+    padding-top: 130%;
+  }
+  .end div {
+    max-width: 95%;
+  }
+  .foot-img p {
+  }
+  .footer img {
+  }
+  .logo {
+    padding-top: 10%;
+  }
+  .logo img {
+    height: 2vh;
+  }
+}
+@media (768px <= width <= 1025px) {
+  .grid {
+    padding-bottom: 55vh;
+
+    max-width: 90%;
+  }
+  .top {
+    width: 90%;
+  }
+  .top h1 {
+    font-size: 5rem;
+  }
+  .top p {
+    font-size: 2rem;
+  }
+  .thin {
+    padding-top: %;
+  }
+  .foot {
+    padding-bottom: 0;
+  }
+  .footer {
+    max-width: 95%;
+    margin-left: 3%;
+  }
+  .footer img {
+    max-width: 50%;
+    height: 6%;
+  }
+  .end {
+    padding-top: 0%;
+  }
+  .end div {
+    max-width: 95%;
+  }
+  .foot-img p {
+  }
+  .footer img {
+  }
+  .logo {
+    padding-top: 10%;
+  }
+  .logo img {
+    height: 2vh;
   }
 }
