@@ -28,6 +28,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        top: 0;
+  position: sticky;
+  background-color: #ffffff;
+  z-index: 1000;
       }
       .navbar div:nth-child(1) img {
         height: 4vh;
@@ -158,6 +162,7 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  display: none;
 }
 
 .sidebar a {
@@ -196,9 +201,26 @@
 }
 
 #main {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 100%;
   transition: margin-right .5s;
   padding: 16px;
   display: ;
+  margin: auto;
+  padding-bottom: 3%;
+  top: 0;
+  position: sticky;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+#main img{
+    float: left;
+    height: 3vh;
+}
+#main button{
+    background-color: transparent;
+    float: right;
+    color: #000000;
 }
 /* Fixed sidenav, full height */
 .sidenav {
@@ -267,7 +289,7 @@
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media (0px <= width <= 500px) {
     #main{
-        
+        display: block;
     }
     .navbar{
         display: none;
@@ -279,10 +301,16 @@
   </head>
   <body>
     
-    <section>
-        <div id="main">
+    <div id="main">
+        <img
+            src="https://www.palmpay.com/_next/static/media/logo.e481427a.png?w=256&q=100"
+            alt=""
+          />
   <button class="openbtn" onclick="openNav()">☰</button>  
+
 </div>
+    <section>
+        
       <div class="navbar">
         <div>
           <img
