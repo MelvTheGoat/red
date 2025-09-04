@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Nested Sidebar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar2 {
+      width: 250px;
+      height: 100vh;
+      background: #333;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar2 a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    .submenu {
+      display: none;
+    }
+
+    .submenu.active {
+      display: block;
+    }
+
+    .back-btn {
+      color: #bbb;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main sidebar -->
+  <div class="sidebar2" id="mainMenu2">
+    <a onclick="openSubmenu('enterpriseMenu')">Enterprise</a>
+    <a onclick="openSubmenu('personalMenu')">Personal</a>
+    <a onclick="openSubmenu('resourcesMenu')">Resources</a>
+  </div>
+
+  <!-- Enterprise submenu -->
+  <div class="sidebar submenu" id="enterpriseMenu">
+    <span class="back-btn" onclick="goBack()">← Back</span>
+    <a href="#">Payment Solutions</a>
+    <a href="#">Grow Your Business</a>
+  </div>
+
+  <!-- Personal submenu -->
+  <div class="sidebar submenu" id="personalMenu">
+    <span class="back-btn" onclick="goBack()">← Back</span>
+    <a href="#">PalmPay App</a>
+    <a href="#">Send Money</a>
+    <a href="#">Bill Payments</a>
+  </div>
+
+  <!-- Resources submenu -->
+  <div class="sidebar submenu" id="resourcesMenu">
+    <span class="back-btn" onclick="goBack()">← Back</span>
+    <a href="#">Pricing</a>
+    <a href="#">Blog</a>
+    <a href="#">Integrations</a>
+  </div>
+
+  <script>
+    let currentMenu = "mainMenu";
+
+    function openSubmenu(id) {
+      document.getElementById(currentMenu).classList.remove("active");
+      document.getElementById(currentMenu).style.display = "none";
+
+      document.getElementById(id).classList.add("active");
+      document.getElementById(id).style.display = "block";
+      currentMenu = id;
+    }
+
+    function goBack() {
+      document.getElementById(currentMenu).classList.remove("active");
+      document.getElementById(currentMenu).style.display = "none";
+
+      document.getElementById("mainMenu").classList.add("active");
+      document.getElementById("mainMenu").style.display = "block";
+      currentMenu = "mainMenu";
+    }
+
+    // Show main menu on load
+    document.getElementById("mainMenu").classList.add("active");
+    document.getElementById("mainMenu").style.display = "block";
+  </script>
+</body>
+</html>

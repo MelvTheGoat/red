@@ -149,12 +149,12 @@
 
       .sidebar {
   height: 100%;
-  width: 0;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #ffffff;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -164,13 +164,13 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #000000;
   display: block;
   transition: 0.3s;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #4400ff;
 }
 
 .sidebar .closebtn {
@@ -180,6 +180,7 @@
   font-size: 36px;
   margin-right: 50px;
 }
+
 
 .openbtn {
   font-size: 20px;
@@ -197,13 +198,79 @@
 #main {
   transition: margin-right .5s;
   padding: 16px;
+  display: ;
+}
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #000000;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: rgb(162, 156, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
   display: none;
+  background-color: #ffffff;
+  padding-left: 8px;
+  color: #000000;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.closebtn{
+    display: none;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media (0px <= width <= 500px) {
     #main{
-        display: block;
+        
+    }
+    .navbar{
+        display: none;
     }
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
@@ -214,7 +281,7 @@
     
     <section>
         <div id="main">
-  <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+  <button class="openbtn" onclick="openNav()">☰</button>  
 </div>
       <div class="navbar">
         <div>
@@ -357,10 +424,100 @@
 
     <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+
+  <button class="dropdown-btn">Personal 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <div>
+        <h1>PalmPay App</h1>
+        <p>Send money, pay in-person and more</p>
+    </div>
+    <div>
+        <h1>Buy and Shop</h1>
+        <p>Pay easily at shops</p>
+    </div>
+    <div>
+        <h1>Send and Receive Money</h1>
+        <p>Make transfer or get paid</p>
+    </div>
+    <div>
+        <h1>Bill Payment</h1>
+        <p>Pay bill and earn cashback</p>
+    </div>
+  </div>
+  <button class="dropdown-btn">Business 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <div>
+        <h1>PalmPay For Business</h1>
+        <p>We provide an all-in-one payments, banking and operations platform designed to grow your business.</p>
+    </div>
+    <div>
+        <h3>Terminals</h3>
+        <h1>POS</h1>
+        <p>Accept payments with POS terminal</p>
+    </div>
+    <div>
+        <h1>Pay with Transfer</h1>
+        <p>Open Transfer Account in minutes</p>
+    </div>
+    <div>
+        <h3>Payment</h3>
+        <h1>Payin</h1>
+        <p>A single platform to accept payments</p>
+    </div>
+    <div>
+        <h1>Payout</h1>
+        <p>Send payouts in real time</p>
+    </div>
+    <div>
+        <h1>Business Account</h1>
+        <p>All your needs in one account</p>
+    </div>
+    <div>
+        <h1>Management</h1>
+        <p>One-stop management suite</p>
+    </div>
+    <div>
+        <h1>Checkout</h1>
+        <p>Coming Soon</p>
+    </div>
+    <div>
+        <h1>Payment Links</h1>
+        <p>Coming Soon</p>
+    </div>
+  </div>
+  <button class="dropdown-btn">Company 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="">ff</a>
+    <a href="">ff</a>
+    <a href="">aa</a>
+    <a href="">gg</a>
+</div>
+  
+  <button class="dropdown-btn">Developers
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="">ff</a>
+    <a href="">ff</a>
+    <a href="">aa</a>
+    <a href="">gg</a>
+</div>
+  <button class="dropdown-btn">Pricing
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="">ff</a>
+    <a href="">ff</a>
+    <a href="">aa</a>
+    <a href="">gg</a>
+</div>
+  
 </div>
 
 
@@ -374,6 +531,20 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
+}
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
 }
 </script>
 
