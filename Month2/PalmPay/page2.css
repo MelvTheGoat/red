@@ -217,6 +217,7 @@ div {
 }
 
 .body {
+  padding-top: 2%;
   margin: auto;
   max-width: 60%;
   display: flex;
@@ -301,56 +302,72 @@ a {
 .appear {
   display: none;
 }
-.foot {
-  max-width: 100%;
-  background-color: rgb(30, 30, 30);
-  height: 46vh;
+.end-whole {
+  background-color: #1e1e1e;
+  color: white;
+  cursor: pointer;
 }
-.footer {
-  padding-top: 2%;
-  margin: auto;
+.ending {
+  overflow: hidden;
+  height: 45vh;
+  padding-top: 1%;
   max-width: 60%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  column-gap: 5%;
+  grid-auto-rows: auto;
 }
-.footer img {
-  height: 4.5%;
-  padding-bottom: 5%;
+.end-whole section {
+  margin: auto;
 }
-.footer p {
-  color: #bfbdba;
+.end-whole h1 {
+  font-size: 2rem;
+}
+.end-whole p {
   font-size: 1.5rem;
 }
-.footer h2 {
-  color: #ffffff;
-  font-size: 2.1rem;
+.ending img {
+  height: 6%;
 }
-.logo {
+.ending div:nth-child(1) {
+  gap: 1%;
+}
+.end-bottom {
+  border-top: 1px solid rgba(204, 204, 204, 0.1);
+}
+.end-bottom div {
+  margin: auto;
+  max-width: 60%;
+  color: #586366;
+  line-height: 1.5;
+  padding-bottom: 2%;
+}
+.end-mid {
+  margin: auto;
+  max-width: 60%;
+  display: block;
+}
+.end-mid img {
+  float: right;
+  height: 3vh;
+  padding-bottom: vh;
+}
+.ending div:nth-child(5) div {
   display: flex;
-  flex-direction: row;
-  gap: 8%;
-  height: 50em;
-  padding-top: 50%;
+  justify-content: space-between;
+  padding-top: 10vh;
+  gap: 1%;
 }
-.foot-img p {
-  padding-top: 25%;
+.ending div:nth-child(5) img {
+  height: 3vh;
+}
+.ending div:nth-child(1) p {
+  padding-top: 5%;
 }
 .img-end {
   height: 3%;
 }
 .img-end img {
   height: 4.5vh;
-}
-.end {
-  background-color: rgb(30, 30, 30);
-  color: #62625f;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-.end div {
-  max-width: 60%;
-  margin: auto;
 }
 .thin {
   /* background-image: url("../PalmPay/palm/footerBg.e4fed23a.png"); */
@@ -404,6 +421,7 @@ a {
   .store {
     display: flex;
     justify-content: center;
+    max-width: 50%;
   }
   .appear {
     display: block;
@@ -414,10 +432,6 @@ a {
   .store img {
     width: 100%;
     height: 4vh;
-  }
-  .end div {
-    max-width: 85%;
-    font-size: 1.2rem;
   }
   .thin div {
     display: flex;
@@ -430,25 +444,26 @@ a {
   .thin h1 {
     font-size: 2rem;
   }
-  .foot {
-    height: fit-content;
-  }
-  .footer {
+  .ending {
+    max-width: 90%;
     display: flex;
     flex-direction: column;
-    max-width: 95%;
+    overflow: visible;
+    color: #e5d4cc;
+    height: fit-content;
   }
-  .footer img {
-    height: 2vh;
+  .ending div {
+    max-width: 60%;
   }
-  .foot-img img {
-    height: 5vh;
+  .ending img {
+    height: 4vh;
   }
-  .logo img {
-    height: 5%;
+  .end-bottom div {
+    padding: 5% 5%;
+    max-width: 90%;
   }
 }
-@media (770px <= width <= 1024px) {
+@media (770px <= width <= 1023px) {
   .navbar {
     display: none;
   }
@@ -515,5 +530,57 @@ a {
   }
   .logo img {
     height: 5%;
+  }
+}
+@media (1024px <= width <= 1400px) {
+  .body {
+    max-width: 100%;
+    gap: 5vh;
+  }
+  .body-in {
+    border-radius: 10px;
+    margin: auto;
+    max-width: 90%;
+    padding-bottom: 0;
+  }
+  .body-in img {
+    height: 4%;
+  }
+  .body-in h1 {
+    font-size: 2.5rem;
+  }
+  .body-in p {
+    font-size: 1.5rem;
+  }
+  .store {
+    display: flex;
+    justify-content: center;
+  }
+  .appear {
+    display: none;
+  }
+  .store img {
+    width: 100%;
+    height: 4vh;
+  }
+
+  .ending {
+    max-width: 90%;
+    overflow: visible;
+    color: #e5d4cc;
+    height: fit-content;
+  }
+  .ending div {
+    max-width: 100%;
+  }
+  .ending div:nth-child(1) {
+    padding-top: 2vh;
+  }
+  .ending img {
+    height: 4vh;
+  }
+  .end-bottom div {
+    padding: 3% 3%;
+    max-width: 90%;
   }
 }

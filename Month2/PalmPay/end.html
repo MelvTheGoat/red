@@ -4,132 +4,345 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
-      section,
-      div {
-        border: 1px solid rgb(0, 0, 0);
-        font-family: "Poppins", sans-serif;
+      * {
+        box-sizing: border-box;
       }
-      .end-whole {
-        background-color: #1e1e1e;
-        color: white;
-        cursor: pointer;
+      html {
+        font-size: 62.5%;
       }
-      .ending {
+      section {
+        margin: auto;
+        background-color: ;
+      }
+      .navbar {
+        /* border: 1px solid red; */
+        margin: auto;
+        max-width: 60%;
         overflow: hidden;
-        height: 45vh;
-        padding-top: 1%;
-        max-width: 60%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-auto-rows: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      .end-whole section {
-        margin: auto;
+      .navbar div:nth-child(1) img {
+        height: 4vh;
       }
-      .ending img {
-        height: 6%;
+      .navbar div:nth-child(1) {
+        padding-right: 15%;
       }
-      .ending div:nth-child(1) {
-        gap: 1%;
+
+      .navbar a {
+        float: left;
+        font-size: 1.6rem;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 2% 2%;
+        text-decoration: none;
       }
-      .end-bottom {
-        border-top: 1px solid rgba(204, 204, 204, 0.1);
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
       }
-      .end-bottom div {
-        margin: auto;
-        max-width: 60%;
-        color: #ffffff;
+
+      .dropdown .dropbtn {
+        font-size: 1.6rem;
+        border: none;
+        outline: none;
+        color: rgb(0, 0, 0);
+        padding: 14px 16px;
+        background-color: inherit;
+        font: inherit;
+        margin: 0;
       }
-      .end-mid {
-        margin: auto;
-        max-width: 60%;
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+      .dropdown {
+        font-size: 1.6rem;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        width: 100%;
+        left: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content .header {
+        background: rgb(255, 255, 255);
+        padding: 16px;
+        color: rgb(0, 0, 0);
+      }
+
+      .dropdown:hover .dropdown-content {
         display: block;
       }
-      .end-mid img {
-        float: right;
-        height: 3vh;
-        padding-bottom: vh;
+      .header {
+        margin: auto;
+        max-width: 60%;
       }
-      .ending div:nth-child(5) div {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 10vh;
-        gap: 1%;
+      .row {
+        margin: auto;
+        max-width: 70%;
       }
-      .ending div:nth-child(5) img {
-        height: 3vh;
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 10px;
+        background-color: #ffffff;
+        height: 10%;
       }
-      .ending div:nth-child(1) p {
-        padding-top: 5%;
+      .column img {
+        height: 5vh;
+      }
+
+      .column a {
+        float: none;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .column a:hover {
+        background-color: #ddd;
+      }
+      .column p {
+        font-size: 1.4rem;
+      }
+      .row div:nth-child(4) {
+        display: inline-block;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media (0px <= width <= 320px) {
+        .navbar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+
+        .navbar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+
+        .navbar a:hover {
+          color: #f1f1f1;
+        }
+
+        .navbar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+
+        .openbtn {
+          font-size: 20px;
+          cursor: pointer;
+          background-color: #111;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+        }
+
+        .openbtn:hover {
+          background-color: #444;
+        }
+
+        #main {
+          transition: margin-left 0.5s;
+          padding: 16px;
+        }
+      }
+      .call {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <section class="end-whole">
-      <section class="ending">
+    <section>
+      <div class="navbar">
         <div>
-          <img src="./palm/logoLight.c6470eab.png" alt="" />
-          <img src="../PalmPay/palm/centralBank.e14647d7.png" alt="" />
-          <img src="./palm/PCI.61c854da.png" alt="" />
-          <img src="./palm/NDIC.2b6dc455.png" alt="" />
-          <img src="./palm/NDPC.5e0c1fc1.png" alt="" />
-          <img src="./palm/fccpc.f0d93ef3.png" alt="" />
-          <p>© 2025 PalmPay. All rights reserved.</p>
+          <img
+            src="https://www.palmpay.com/_next/static/media/logo.e481427a.png?w=256&q=100"
+            alt=""
+          />
         </div>
-        <div>
-          <h1>Personal</h1>
-          <p>PalmPay App</p>
-          <p>Send and Receive Money</p>
-          <p>Bill Payment</p>
-          <p>Buy and Shop</p>
-        </div>
-        <div>
-          <h1>Business</h1>
-          <p>Payin</p>
-          <p>Payout</p>
-          <p>POS</p>
-          <p>Pay with Transfer</p>
-          <p>Business Account</p>
-          <p>Management</p>
-          <p>Agent Network</p>
-        </div>
-        <div>
-          <h1>Company</h1>
-          <p>About</p>
-          <p>Blog</p>
-          <p>Press and Media</p>
-          <p>Contact</p>
-        </div>
-        <div>
-          <h1>Legal</h1>
-          <p>Privacy Policy</p>
-          <p>Terms & Conditions</p>
-          <p>Complaints</p>
-          <p>Loan Privacy Policy</p>
-          <div>
-            <img src="./palm/Instagram.402c19f4.png" alt="" />
-            <img src="./palm/Facebook.994376ce.png" alt="" />
-            <img src="./palm/XCorp.24c83d0b.png" alt="" />
-            <img src="./palm/Instagram.402c19f4.png" alt="" />
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Personal
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="column">
+                <h3>PalmPay For You</h3>
+                <p>
+                  30 million users trust PalmPay to make transfer, pay bills,
+                  and shop securely.
+                </p>
+              </div>
+              <div class="column">
+                <h3>PalmPay App</h3>
+                <p>Send money, pay in-person and more</p>
+                <h3>Buy and Shop</h3>
+                <p>Pay easily at shops</p>
+              </div>
+              <div class="column">
+                <h3>Send and Receive Money</h3>
+                <p>Make transfer or get paid</p>
+                <h3>Bill Payment</h3>
+                <p>Pay bill and earn cashback</p>
+              </div>
+              <div class="column">
+                <img
+                  src="https://www.palmpay.com/_next/static/media/GooglePlayBadge.7395fff3.png?w=384&q=100"
+                  alt=""
+                />
+                <img
+                  src="https://www.palmpay.com/_next/static/media/AppStoreBadge.615d20e2.png?w=384&q=100"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="end-bottom">
-        <div>
-          <p>
-            PalmPay is a financial service provided by PalmPay Limited, licensed
-            and regulated by the Central Bank of Nigeria (CBN). Deposits are
-            insured by the Nigerian Deposit Insurance Corporation (NDIC). Loan
-            services on PalmPay are provided by Flexi Microfinance Bank Limited,
-            licensed by the Central Bank of Nigeria (CBN). We empower
-            individuals and businesses with payments solutions, high-yield
-            investment opportunities, and easy-to-use tools for financial
-            management. We are a global company with a presence in Nigeria,
-            Ghana, Tanzania, and the United Kingdom.
-          </p>
+
+        <div class="dropdown">
+          <button class="dropbtn">
+            Business
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="header">
+              <h2>PalmPay For Business</h2>
+              <p>
+                Our simple, all-in-one solution for payments, banking and
+                operations, helps businesses of all sizes to grow and succeed.
+              </p>
+            </div>
+            <div class="row">
+              <div class="column">
+                <h5>Terminals</h5>
+                <h3>POS</h3>
+                <p>Accept payments with POS terminal</p>
+                <h3>Pay with Transfer</h3>
+                <p>Open Transfer Account in minutes</p>
+              </div>
+              <div class="column">
+                <h5>Payment</h5>
+                <h3>Payin</h3>
+                <p>A single platform to accept payments</p>
+                <h3>Payout</h3>
+                <p>Send payouts in real time</p>
+              </div>
+
+              <div class="column">
+                <h3>Send and Receive Money</h3>
+                <p>Make transfer or get paid</p>
+                <h3>Management</h3>
+                <p>One-stop management suite</p>
+              </div>
+              <div class="column">
+                <h1></h1>
+                <p>Checkout <sub>Coming Soon</sub></p>
+                <p>Payment Links <sub>Coming Soon</sub></p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+        <a href="">Company</a>
+        <a href="">Developers</a>
+        <a href="">Pricing</a>
+        <a href=""><button>Log In</button></a>
+        <a href=""><button>Nigeria</button></a>
+      </div>
+      <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+      <script>
+        function openNav() {
+          document.getElementById("navbar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        function openNav() {
+          document.getElementById("navbar").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
+    </div>
+      <div class="call"></div>
     </section>
+    <div style="font-size: 3rem">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quia
+      voluptates debitis velit natus fuga deleniti laboriosam, minima sint
+      perferendis consectetur ratione ipsam saepe eligendi ad nobis perspiciatis
+      expedita assumenda! Nemo distinctio, dicta praesentium voluptas possimus
+      quidem corrupti libero iste non pariatur ea similique delectus neque sequi
+      quas culpa iure iusto reiciendis quisquam laborum, fugit vel officia
+      excepturi. Illum, enim. Sequi necessitatibus minus, neque cupiditate
+      ducimus ex aspernatur ratione, itaque rerum tempore aliquam, incidunt
+      atque dignissimos illum! Accusantium iure rem minus atque, vel corrupti
+      modi molestiae voluptas. Consectetur, cum dolorem. Suscipit at amet,
+      delectus temporibus quasi eum, vel doloribus magni saepe maxime quis animi
+      vitae ipsa deserunt! Sunt laudantium amet impedit facilis dolor?
+      Recusandae voluptatum fugit fuga et autem soluta. Eos ipsum reiciendis
+      consequatur, at dolor vel facere voluptatum modi molestias voluptates
+      deleniti quis hic necessitatibus explicabo nesciunt, illum optio, rem quo
+      eligendi. Nisi numquam deleniti incidunt doloremque necessitatibus
+      distinctio. Aspernatur, architecto quidem. Delectus soluta fugit
+      recusandae ipsam repellat sit cupiditate dolorem, neque quia ratione,
+      accusamus illo minima corrupti error! Odio perspiciatis mollitia nisi
+      sapiente rem incidunt similique voluptate fugiat. Temporibus corporis nam,
+      libero numquam consectetur fugiat eligendi enim a fugit quo distinctio
+      consequuntur rem animi quisquam beatae excepturi laudantium odit. Natus
+      quidem provident cumque ea cupiditate asperiores nisi amet? Rem, ipsa
+      blanditiis autem sequi delectus deleniti beatae nihil vel, cum sint
+      adipisci vero labore corrupti architecto corporis veniam. Doloremque
+      numquam eius quo? Laudantium accusantium id quidem culpa accusamus?
+      Veniam. Dicta rerum modi molestias, similique vel ullam delectus sapiente.
+      Repellendus commodi tenetur corporis at officiis dolorem dolores beatae,
+      sit praesentium voluptate eos consequuntur libero provident labore, quia
+      fuga voluptatem hic! Qui iusto enim tenetur voluptatibus deleniti,
+      suscipit provident maxime quam facere laboriosam non nostrum incidunt
+      corporis aut minus necessitatibus iure nemo voluptate, corrupti, similique
+      repudiandae. Numquam temporibus vero nostrum amet.
+    </div>
+    
   </body>
 </html>
