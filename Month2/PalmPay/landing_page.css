@@ -195,7 +195,7 @@ ul {
   transition: margin-right 0.5s;
   padding: 16px;
   display: none;
-  
+  padding-bottom: 14%;
 }
 #main img{
   float: left;
