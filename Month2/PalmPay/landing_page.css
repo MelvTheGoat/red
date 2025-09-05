@@ -824,6 +824,29 @@ nav {
   .navbar {
     display: flex;
   }
+  .navbar a{
+    font-size: 1.5rem;
+    padding: 1% 1%;
+    
+  }
+  .dropdown{
+    font-size: 1.5rem;
+  }
+  .login-btn{
+    
+    white-space: nowrap;
+  }
+  .right-controls a{
+    padding-left: 5%;
+    padding: 0.5em 1em;
+    font-size: 1.3rem;      
+  }
+  .region-btn{
+    padding: 1% 1%;
+  }
+  .region-btn img{
+    max-width: 100%;
+  }
   .body-1 img {
     height: 18vh;
     max-width: 100%;
@@ -957,13 +980,13 @@ nav {
     /* border: 1px solid black; */
   }
   #main{
-    display: block;
+    display: none;
   }
   .sidenav{
-    display: block;
+    display: none;
   }
   .body-1 img {
-    height: 19vh;
+    height: 25vh;
     max-width: 100%;
   }
   .body1 {

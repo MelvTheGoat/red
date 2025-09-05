@@ -482,6 +482,37 @@ div {
   gap: 4%;
 }
 @media (0px <= width <= 425px) {
+    .navbar {
+    display: none;
+  }
+  #main{
+    margin-top: 0;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+  }
+  #main button{
+    
+    margin-top: 0;
+    float: right;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  #main img{
+    height: 4vh;
+    float: left;
+    margin-bottom: 0;
+    z-index: 1;
+  }
+  .sidebar{
+   display: block;
+   width: 0;
+  }
+
   .grid {
     display: flex;
     flex-direction: column;
@@ -537,6 +568,37 @@ div {
   }
 }
 @media (426px <= width <= 768px) {
+    .navbar {
+    display: none;
+  }
+  #main{
+    margin-top: 0;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+  }
+  #main button{
+    
+    margin-top: 0;
+    float: right;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  #main img{
+    height: 4vh;
+    float: left;
+    margin-bottom: 0;
+    z-index: 1;
+  }
+  .sidebar{
+   display: block;
+   width: 0;
+  }
+
   .grid {
     display: flex;
     flex-direction: column;
@@ -581,6 +643,7 @@ div {
   }
 }
 @media (768px <= width <= 1025px) {
+  
   .grid {
     padding-bottom: 55vh;
 

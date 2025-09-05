@@ -525,6 +525,34 @@ a {
   .navbar {
     display: none;
   }
+  #main{
+    margin-top: 0;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+  }
+  #main button{
+    
+    margin-top: 0;
+    float: right;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  #main img{
+    height: 4vh;
+    float: left;
+    margin-bottom: 0;
+    z-index: 1;
+  }
+  .sidebar{
+   display: block;
+   width: 0;
+  }
+  
   .body {
     display: flex;
     flex-direction: column;
@@ -598,6 +626,33 @@ a {
   .navbar {
     display: none;
   }
+  #main{
+    margin-top: 0;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+  }
+  #main button{
+    
+    margin-top: 0;
+    float: right;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  #main img{
+    height: 4vh;
+    float: left;
+    margin-bottom: 0;
+    z-index: 1;
+  }
+  .sidebar{
+   display: block;
+   width: 0;
+  }
   .body {
     max-width: 100%;
     gap: 10vh;
@@ -664,6 +719,13 @@ a {
   }
 }
 @media (1024px <= width <= 1400px) {
+    #main{
+    display: none;
+  }
+  .sidenav{
+    display: none;
+  }
+
   .body {
     max-width: 100%;
     gap: 5vh;
