@@ -11,6 +11,7 @@ div {
   display: flex;
   height: 100vh;
 }
+
 .right {
   margin: auto;
   max-width: 50%;
