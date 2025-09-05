@@ -141,7 +141,6 @@ ul {
 }
 
 .sidebar {
-  display: ;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -152,7 +151,7 @@ ul {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  z-index: 1000;
+  z-index: 9999; 
   display: none;
 }
 
@@ -678,9 +677,11 @@ ul {
     height: 5vh;
     float: left;
     margin-top: 0;
+    z-index: 1;
   }
   .sidebar{
-    display: block;
+   display: block;
+   width: 0;
   }
   .body-1 img {
     height: 13vh;

@@ -10,7 +10,10 @@
     <section class="mega">
       <div id="main">
         <button class="openbtn" onclick="openNav()">☰</button>
-        <img src="https://www.palmpay.com/_next/static/media/logo.e481427a.png?w=256&q=100" alt="">
+        <img
+          src="https://www.palmpay.com/_next/static/media/logo.e481427a.png?w=256&q=100"
+          alt=""
+        />
       </div>
       <div class="navbar">
         <div>
@@ -241,27 +244,23 @@
 
       <script>
         function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
+          const sidebar = document.getElementById("mySidebar");
+          const overlay = document.getElementById("overlay");
+
+          sidebar.style.display = "block";
+          sidebar.style.width = "250px"; // or "100%" for fullscreen menu
+          overlay.style.display = "block"; // show dark/blur background
         }
 
         function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginLeft = "0";
-        }
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
+          const sidebar = document.getElementById("mySidebar");
+          const overlay = document.getElementById("overlay");
 
-        for (i = 0; i < dropdown.length; i++) {
-          dropdown[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-            } else {
-              dropdownContent.style.display = "block";
-            }
-          });
+          sidebar.style.width = "0";
+          setTimeout(() => {
+            sidebar.style.display = "none";
+          }, 300); // wait for slide-out animation
+          overlay.style.display = "none"; // hide background
         }
       </script>
     </section>
