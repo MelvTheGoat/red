@@ -9,18 +9,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
-      * {
-        box-sizing: border-box;
-      }
       html {
         font-size: 62.5%;
       }
-      section {
+      .mega {
         margin: auto;
         background-color: ;
       }
       .navbar {
-        /* border: 1px solid red; */
+        border: 1px solid red;
         margin: auto;
         max-width: 60%;
         overflow: hidden;
@@ -28,11 +25,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: sticky;
         top: 0;
-  position: sticky;
-  background-color: #ffffff;
-  z-index: 1000;
-  height: 3vh;
       }
       .navbar div:nth-child(1) img {
         height: 4vh;
@@ -68,7 +62,8 @@
 
       .navbar a:hover,
       .dropdown:hover .dropbtn {
-        background-color: red;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 3px solid blue;
       }
       .dropdown {
         font-size: 1.6rem;
@@ -147,171 +142,148 @@
         display: none;
       }
 
-
-
-
-
-
       .sidebar {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  display: none;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #000000;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #4400ff;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-right: 50px;
-}
-
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: #444;
-}
-
-#main {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-  transition: margin-right .5s;
-  padding: 16px;
-  display: ;
-  margin: auto;
-  padding-bottom: 3%;
-  top: 0;
-  position: sticky;
-  background-color: #ffffff;
-  z-index: 1000;
-}
-#main img{
-    float: left;
-    height: 3vh;
-}
-#main button{
-    background-color: transparent;
-    float: right;
-    color: #000000;
-}
-/* Fixed sidenav, full height */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-/* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #000000;
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-
-/* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
-  color: #000000;
-}
-
-/* Main content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-/* Add an active class to the active dropdown button */
-.active {
-  background-color: rgb(162, 156, 255);
-  color: rgb(0, 0, 0);
-}
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #ffffff;
-  padding-left: 8px;
-  color: #000000;
-}
-
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
-}
-
-.closebtn{
-    display: none;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media (0px <= width <= 500px) {
-    #main{
-        display: block;
-    }
-    .navbar{
+        display: ;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 1000;
         display: none;
-    }
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
+      }
+
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #000000;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        color: #4400ff;
+      }
+
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-right: 50px;
+      }
+
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
+
+      .openbtn:hover {
+        background-color: #444;
+      }
+
+      #main {
+        transition: margin-right 0.5s;
+        padding: 16px;
+        display: none;
+      }
+      /* Fixed sidenav, full height */
+      .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+
+      /* Style the sidenav links and the dropdown button */
+      .sidenav a,
+      .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #000000;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+      }
+
+      /* On mouse-over */
+      .sidenav a:hover,
+      .dropdown-btn:hover {
+        color: #000000;
+      }
+
+      /* Main content */
+      .main {
+        margin-left: 200px; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+      }
+
+      /* Add an active class to the active dropdown button */
+      .active {
+        background-color: rgb(162, 156, 255);
+        color: rgb(0, 0, 0);
+      }
+
+      /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+      .dropdown-container {
+        display: none;
+        background-color: #ffffff;
+        padding-left: 8px;
+        color: #000000;
+      }
+
+      /* Optional: Style the caret down icon */
+      .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+      }
+
+      .closebtn {
+        display: none;
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media (0px <= width <= 500px) {
+        #main {
+        }
+        .navbar {
+          display: none;
+        }
+        .sidebar {
+          padding-top: 15px;
+        }
+        .sidebar a {
+          font-size: 18px;
+        }
+      }
     </style>
   </head>
   <body>
-    
-    <div id="main">
-        <img
-            src="https://www.palmpay.com/_next/static/media/logo.e481427a.png?w=256&q=100"
-            alt=""
-          />
-  <button class="openbtn" onclick="openNav()">☰</button>  
-
-</div>
     <section>
-        
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+      </div>
       <div class="navbar">
         <div>
           <img
@@ -406,178 +378,139 @@
         <a href="">Company</a>
         <a href="">Developers</a>
         <a href="">Pricing</a>
-        <a href=""><button>Log In</button></a>
-        <a href=""><button>Nigeria</button></a>
       </div>
+
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+        <button class="dropdown-btn">
+          Personal
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <div>
+            <h1>PalmPay App</h1>
+            <p>Send money, pay in-person and more</p>
+          </div>
+          <div>
+            <h1>Buy and Shop</h1>
+            <p>Pay easily at shops</p>
+          </div>
+          <div>
+            <h1>Send and Receive Money</h1>
+            <p>Make transfer or get paid</p>
+          </div>
+          <div>
+            <h1>Bill Payment</h1>
+            <p>Pay bill and earn cashback</p>
+          </div>
+        </div>
+        <button class="dropdown-btn">
+          Business
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <div>
+            <h1>PalmPay For Business</h1>
+            <p>
+              We provide an all-in-one payments, banking and operations platform
+              designed to grow your business.
+            </p>
+          </div>
+          <div>
+            <h3>Terminals</h3>
+            <h1>POS</h1>
+            <p>Accept payments with POS terminal</p>
+          </div>
+          <div>
+            <h1>Pay with Transfer</h1>
+            <p>Open Transfer Account in minutes</p>
+          </div>
+          <div>
+            <h3>Payment</h3>
+            <h1>Payin</h1>
+            <p>A single platform to accept payments</p>
+          </div>
+          <div>
+            <h1>Payout</h1>
+            <p>Send payouts in real time</p>
+          </div>
+          <div>
+            <h1>Business Account</h1>
+            <p>All your needs in one account</p>
+          </div>
+          <div>
+            <h1>Management</h1>
+            <p>One-stop management suite</p>
+          </div>
+          <div>
+            <h1>Checkout</h1>
+            <p>Coming Soon</p>
+          </div>
+          <div>
+            <h1>Payment Links</h1>
+            <p>Coming Soon</p>
+          </div>
+        </div>
+        <button class="dropdown-btn">
+          Company
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="">ff</a>
+          <a href="">ff</a>
+          <a href="">aa</a>
+          <a href="">gg</a>
+        </div>
+
+        <button class="dropdown-btn">
+          Developers
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="">ff</a>
+          <a href="">ff</a>
+          <a href="">aa</a>
+          <a href="">gg</a>
+        </div>
+        <button class="dropdown-btn">
+          Pricing
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="">ff</a>
+          <a href="">ff</a>
+          <a href="">aa</a>
+          <a href="">gg</a>
+        </div>
+      </div>
+
       
-    </div>
-      <div class="call"></div>
     </section>
-    <div style="font-size: 3rem">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quia
-      voluptates debitis velit natus fuga deleniti laboriosam, minima sint
-      perferendis consectetur ratione ipsam saepe eligendi ad nobis perspiciatis
-      expedita assumenda! Nemo distinctio, dicta praesentium voluptas possimus
-      quidem corrupti libero iste non pariatur ea similique delectus neque sequi
-      quas culpa iure iusto reiciendis quisquam laborum, fugit vel officia
-      excepturi. Illum, enim. Sequi necessitatibus minus, neque cupiditate
-      ducimus ex aspernatur ratione, itaque rerum tempore aliquam, incidunt
-      atque dignissimos illum! Accusantium iure rem minus atque, vel corrupti
-      modi molestiae voluptas. Consectetur, cum dolorem. Suscipit at amet,
-      delectus temporibus quasi eum, vel doloribus magni saepe maxime quis animi
-      vitae ipsa deserunt! Sunt laudantium amet impedit facilis dolor?
-      Recusandae voluptatum fugit fuga et autem soluta. Eos ipsum reiciendis
-      consequatur, at dolor vel facere voluptatum modi molestias voluptates
-      deleniti quis hic necessitatibus explicabo nesciunt, illum optio, rem quo
-      eligendi. Nisi numquam deleniti incidunt doloremque necessitatibus
-      distinctio. Aspernatur, architecto quidem. Delectus soluta fugit
-      recusandae ipsam repellat sit cupiditate dolorem, neque quia ratione,
-      accusamus illo minima corrupti error! Odio perspiciatis mollitia nisi
-      sapiente rem incidunt similique voluptate fugiat. Temporibus corporis nam,
-      libero numquam consectetur fugiat eligendi enim a fugit quo distinctio
-      consequuntur rem animi quisquam beatae excepturi laudantium odit. Natus
-      quidem provident cumque ea cupiditate asperiores nisi amet? Rem, ipsa
-      blanditiis autem sequi delectus deleniti beatae nihil vel, cum sint
-      adipisci vero labore corrupti architecto corporis veniam. Doloremque
-      numquam eius quo? Laudantium accusantium id quidem culpa accusamus?
-      Veniam. Dicta rerum modi molestias, similique vel ullam delectus sapiente.
-      Repellendus commodi tenetur corporis at officiis dolorem dolores beatae,
-      sit praesentium voluptate eos consequuntur libero provident labore, quia
-      fuga voluptatem hic! Qui iusto enim tenetur voluptatibus deleniti,
-      suscipit provident maxime quam facere laboriosam non nostrum incidunt
-      corporis aut minus necessitatibus iure nemo voluptate, corrupti, similique
-      repudiandae. Numquam temporibus vero nostrum amet.
-    </div>
-    
+    <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
 
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
 
-    <div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-
-  <button class="dropdown-btn">Personal 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <div>
-        <h1>PalmPay App</h1>
-        <p>Send money, pay in-person and more</p>
-    </div>
-    <div>
-        <h1>Buy and Shop</h1>
-        <p>Pay easily at shops</p>
-    </div>
-    <div>
-        <h1>Send and Receive Money</h1>
-        <p>Make transfer or get paid</p>
-    </div>
-    <div>
-        <h1>Bill Payment</h1>
-        <p>Pay bill and earn cashback</p>
-    </div>
-  </div>
-  <button class="dropdown-btn">Business 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <div>
-        <h1>PalmPay For Business</h1>
-        <p>We provide an all-in-one payments, banking and operations platform designed to grow your business.</p>
-    </div>
-    <div>
-        <h3>Terminals</h3>
-        <h1>POS</h1>
-        <p>Accept payments with POS terminal</p>
-    </div>
-    <div>
-        <h1>Pay with Transfer</h1>
-        <p>Open Transfer Account in minutes</p>
-    </div>
-    <div>
-        <h3>Payment</h3>
-        <h1>Payin</h1>
-        <p>A single platform to accept payments</p>
-    </div>
-    <div>
-        <h1>Payout</h1>
-        <p>Send payouts in real time</p>
-    </div>
-    <div>
-        <h1>Business Account</h1>
-        <p>All your needs in one account</p>
-    </div>
-    <div>
-        <h1>Management</h1>
-        <p>One-stop management suite</p>
-    </div>
-    <div>
-        <h1>Checkout</h1>
-        <p>Coming Soon</p>
-    </div>
-    <div>
-        <h1>Payment Links</h1>
-        <p>Coming Soon</p>
-    </div>
-  </div>
-  <button class="dropdown-btn">Company 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="">ff</a>
-    <a href="">ff</a>
-    <a href="">aa</a>
-    <a href="">gg</a>
-</div>
-  
-  <button class="dropdown-btn">Developers
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="">ff</a>
-    <a href="">ff</a>
-    <a href="">aa</a>
-    <a href="">gg</a>
-</div>
-  <button class="dropdown-btn">Pricing
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="">ff</a>
-    <a href="">ff</a>
-    <a href="">aa</a>
-    <a href="">gg</a>
-</div>
-  
-</div>
-
-
-
-<script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-</script>
-
-
-
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      </script>
   </body>
 </html>
