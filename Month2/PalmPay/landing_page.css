@@ -664,10 +664,13 @@ ul {
   #main{
     margin-top: 0;
     padding-bottom: 8%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     /* border: 1px solid blue; */
   }
   #main button{
+    
     margin-top: 0;
     float: right;
     background-color: transparent;
@@ -678,7 +681,7 @@ ul {
   #main img{
     height: 4vh;
     float: left;
-    margin-top: 0;
+    margin-bottom: 0;
     z-index: 1;
   }
   .sidebar{

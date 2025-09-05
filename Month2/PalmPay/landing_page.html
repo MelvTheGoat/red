@@ -9,11 +9,12 @@
   <body>
     <section class="mega">
       <div id="main">
-        <button class="openbtn" onclick="openNav()">☰</button>
+        
         <img
           src="https://www.palmpay.com/_next/static/media/logo.e481427a.png?w=256&q=100"
           alt=""
         />
+        <button class="openbtn" onclick="openNav()">☰</button>
       </div>
       <div class="navbar">
         <div>
@@ -244,23 +245,29 @@
 
       <script>
         function openNav() {
-          const sidebar = document.getElementById("mySidebar");
-          const overlay = document.getElementById("overlay");
-
-          sidebar.style.display = "block";
-          sidebar.style.width = "250px"; // or "100%" for fullscreen menu
-          overlay.style.display = "block"; // show dark/blur background
+          document.getElementById("mySidebar").style.width = "250px";
+          // Remove this line ↓
+          // document.getElementById("main").style.marginLeft = "250px";
         }
 
         function closeNav() {
-          const sidebar = document.getElementById("mySidebar");
-          const overlay = document.getElementById("overlay");
+          document.getElementById("mySidebar").style.width = "0";
+          // Remove this line ↓
+          // document.getElementById("main").style.marginLeft = "0";
+        }
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
 
-          sidebar.style.width = "0";
-          setTimeout(() => {
-            sidebar.style.display = "none";
-          }, 300); // wait for slide-out animation
-          overlay.style.display = "none"; // hide background
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
         }
       </script>
     </section>
