@@ -662,7 +662,8 @@ ul {
     display: none;
   }
   #main{
-    padding-bottom: 20%;
+    margin-top: 0;
+    padding-bottom: 8%;
     display: block;
     border: 1px solid blue;
   }
@@ -672,9 +673,10 @@ ul {
     background-color: transparent;
     color: black;
     font-weight: bold;
+    font-size: 2rem;
   }
   #main img{
-    height: 5vh;
+    height: 4vh;
     float: left;
     margin-top: 0;
     z-index: 1;
