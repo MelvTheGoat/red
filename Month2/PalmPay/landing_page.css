@@ -195,7 +195,7 @@ ul {
   transition: margin-right 0.5s;
   padding: 16px;
   display: none;
-  padding-bottom: 14%;
+  
 }
 #main img{
   float: left;
@@ -663,18 +663,21 @@ ul {
     display: none;
   }
   #main{
-  
+    padding-bottom: 20%;
     display: block;
+    border: 1px solid blue;
   }
   #main button{
+    margin-top: 0;
     float: right;
     background-color: transparent;
     color: black;
     font-weight: bold;
   }
   #main img{
-    height: 4vh;
+    height: 5vh;
     float: left;
+    margin-top: 0;
   }
   .sidebar{
     display: block;
