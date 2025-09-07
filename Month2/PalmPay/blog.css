@@ -88,7 +88,6 @@ div {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  
 }
 .header {
   margin: auto;
@@ -98,7 +97,6 @@ div {
   margin: auto;
   max-width: 70%;
 }
-
 
 .column {
   float: left;
@@ -130,7 +128,6 @@ div {
   display: inline-block;
 }
 
-
 .row:after {
   content: "";
   display: table;
@@ -147,7 +144,7 @@ div {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  z-index: 9999; 
+  z-index: 9999;
   display: none;
 }
 
@@ -190,12 +187,11 @@ div {
   transition: margin-right 0.5s;
   padding: 16px;
   display: none;
-  
 }
-#main img{
+#main img {
   float: left;
 }
-#main button{
+#main button {
   float: right;
 }
 
@@ -232,13 +228,11 @@ div {
   cursor: pointer;
 }
 
-
 .main {
   margin-left: 200px;
-  font-size: 20px; 
+  font-size: 20px;
   padding: 0px 10px;
 }
-
 
 .active {
   background-color: rgb(162, 156, 255);
@@ -251,7 +245,6 @@ div {
   padding-left: 8px;
   color: #000000;
 }
-
 
 .fa-caret-down {
   float: right;
@@ -268,21 +261,20 @@ div {
   gap: 1.5rem;
   padding-left: 1%;
 }
-.right-controls a{
+.right-controls a {
   color: #ffffff;
   padding: 1rem 2.3rem;
 }
 .login-btn {
   background: #6c2bd9;
   color: rgb(255, 255, 255);
-  
+
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.7rem;
 }
-.login-btn:hover{
-
+.login-btn:hover {
 }
 
 .region-dropdown {
@@ -300,7 +292,7 @@ div {
   cursor: pointer;
 }
 
-.region-btn img{
+.region-btn img {
   width: 40px;
   height: 1px;
 }
@@ -481,11 +473,11 @@ div {
   flex-direction: row;
   gap: 4%;
 }
-@media (0px <= width <= 425px) {
-    .navbar {
+@media (0px <= width <= 767px) {
+  .navbar {
     display: none;
   }
-  #main{
+  #main {
     margin-top: 0;
     padding-bottom: 5%;
     display: flex;
@@ -493,8 +485,7 @@ div {
     justify-content: space-between;
     /* border: 1px solid blue; */
   }
-  #main button{
-    
+  #main button {
     margin-top: 0;
     float: right;
     background-color: transparent;
@@ -502,15 +493,15 @@ div {
     font-weight: bold;
     font-size: 2rem;
   }
-  #main img{
+  #main img {
     height: 4vh;
     float: left;
     margin-bottom: 0;
     z-index: 1;
   }
-  .sidebar{
-   display: block;
-   width: 0;
+  .sidebar {
+    display: block;
+    width: 0;
   }
 
   .grid {
@@ -541,37 +532,30 @@ div {
   .thin h1 {
     font-size: 2rem;
   }
-  .footer {
+  .ending {
+    max-width: 90%;
     display: flex;
     flex-direction: column;
-    max-width: 95%;
+    overflow: visible;
+    color: #e5d4cc;
+    height: fit-content;
   }
-  .footer img {
-    max-width: 50%;
-    height: 6%;
+  .ending div {
+    max-width: 40%;
   }
-  .end {
-    padding-top: 300%;
+  .ending img {
+    height: 4vh;
   }
-  .end div {
-    max-width: 95%;
-  }
-  .foot-img p {
-  }
-  .footer img {
-  }
-  .logo {
-    padding-top: 10%;
-  }
-  .logo img {
-    height: 2vh;
+  .end-bottom div {
+    padding: 5% 5%;
+    max-width: 90%;
   }
 }
-@media (426px <= width <= 768px) {
-    .navbar {
+@media (768px <= width <= 1023px) {
+  .navbar {
     display: none;
   }
-  #main{
+  #main {
     margin-top: 0;
     padding-bottom: 5%;
     display: flex;
@@ -579,8 +563,7 @@ div {
     justify-content: space-between;
     /* border: 1px solid blue; */
   }
-  #main button{
-    
+  #main button {
     margin-top: 0;
     float: right;
     background-color: transparent;
@@ -588,15 +571,15 @@ div {
     font-weight: bold;
     font-size: 2rem;
   }
-  #main img{
+  #main img {
     height: 4vh;
     float: left;
     margin-bottom: 0;
     z-index: 1;
   }
-  .sidebar{
-   display: block;
-   width: 0;
+  .sidebar {
+    display: block;
+    width: 0;
   }
 
   .grid {
@@ -615,35 +598,26 @@ div {
   .top p {
     font-size: 2rem;
   }
-  .footer {
+  .ending {
+    max-width: 90%;
     display: flex;
     flex-direction: column;
-    max-width: 45%;
-    margin-left: 3%;
+    overflow: visible;
+    color: #e5d4cc;
+    height: fit-content;
   }
-  .footer img {
-    max-width: 50%;
-    height: 6%;
+  .ending div {
+    max-width: 30%;
   }
-  .end {
-    padding-top: 130%;
+  .ending img {
+    height: 4vh;
   }
-  .end div {
-    max-width: 95%;
-  }
-  .foot-img p {
-  }
-  .footer img {
-  }
-  .logo {
-    padding-top: 10%;
-  }
-  .logo img {
-    height: 2vh;
+  .end-bottom div {
+    padding: 5% 5%;
+    max-width: 90%;
   }
 }
-@media (768px <= width <= 1025px) {
-  
+@media (1024px <= width <= 1400px) {
   .grid {
     padding-bottom: 55vh;
 
@@ -661,31 +635,23 @@ div {
   .thin {
     padding-top: %;
   }
-  .foot {
-    padding-bottom: 0;
+  .ending {
+    max-width: 90%;
+    overflow: visible;
+    color: #e5d4cc;
+    height: fit-content;
   }
-  .footer {
-    max-width: 95%;
-    margin-left: 3%;
+  .ending div {
+    max-width: 100%;
   }
-  .footer img {
-    max-width: 50%;
-    height: 6%;
+  .ending div:nth-child(1) {
+    padding-top: 2vh;
   }
-  .end {
-    padding-top: 0%;
+  .ending img {
+    height: 4vh;
   }
-  .end div {
-    max-width: 95%;
-  }
-  .foot-img p {
-  }
-  .footer img {
-  }
-  .logo {
-    padding-top: 10%;
-  }
-  .logo img {
-    height: 2vh;
+  .end-bottom div {
+    padding: 3% 3%;
+    max-width: 90%;
   }
 }

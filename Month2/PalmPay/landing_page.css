@@ -89,7 +89,6 @@ nav {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  
 }
 .header {
   margin: auto;
@@ -99,7 +98,6 @@ nav {
   margin: auto;
   max-width: 70%;
 }
-
 
 .column {
   float: left;
@@ -131,7 +129,6 @@ nav {
   display: inline-block;
 }
 
-
 .row:after {
   content: "";
   display: table;
@@ -148,7 +145,7 @@ nav {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  z-index: 9999; 
+  z-index: 9999;
   display: none;
 }
 
@@ -191,12 +188,11 @@ nav {
   transition: margin-right 0.5s;
   padding: 16px;
   display: none;
-  
 }
-#main img{
+#main img {
   float: left;
 }
-#main button{
+#main button {
   float: right;
 }
 
@@ -233,13 +229,11 @@ nav {
   cursor: pointer;
 }
 
-
 .main {
   margin-left: 200px;
-  font-size: 20px; 
+  font-size: 20px;
   padding: 0px 10px;
 }
-
 
 .active {
   background-color: rgb(162, 156, 255);
@@ -252,7 +246,6 @@ nav {
   padding-left: 8px;
   color: #000000;
 }
-
 
 .fa-caret-down {
   float: right;
@@ -269,21 +262,20 @@ nav {
   gap: 1.5rem;
   padding-left: 1%;
 }
-.right-controls a{
+.right-controls a {
   color: #ffffff;
   padding: 1rem 2.3rem;
 }
 .login-btn {
   background: #6c2bd9;
   color: rgb(255, 255, 255);
-  
+
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.7rem;
 }
-.login-btn:hover{
-
+.login-btn:hover {
 }
 
 .region-dropdown {
@@ -301,7 +293,7 @@ nav {
   cursor: pointer;
 }
 
-.region-btn img{
+.region-btn img {
   width: 40px;
   height: 1px;
 }
@@ -662,7 +654,7 @@ nav {
   .navbar {
     display: none;
   }
-  #main{
+  #main {
     margin-top: 0;
     padding-bottom: 5%;
     display: flex;
@@ -670,8 +662,7 @@ nav {
     justify-content: space-between;
     /* border: 1px solid blue; */
   }
-  #main button{
-    
+  #main button {
     margin-top: 0;
     float: right;
     background-color: transparent;
@@ -679,15 +670,15 @@ nav {
     font-weight: bold;
     font-size: 2rem;
   }
-  #main img{
+  #main img {
     height: 4vh;
     float: left;
     margin-bottom: 0;
     z-index: 1;
   }
-  .sidebar{
-   display: block;
-   width: 0;
+  .sidebar {
+    display: block;
+    width: 0;
   }
   .body-1 img {
     height: 13vh;
@@ -824,27 +815,25 @@ nav {
   .navbar {
     display: flex;
   }
-  .navbar a{
+  .navbar a {
     font-size: 1.5rem;
     padding: 1% 1%;
-    
   }
-  .dropdown{
+  .dropdown {
     font-size: 1.5rem;
   }
-  .login-btn{
-    
+  .login-btn {
     white-space: nowrap;
   }
-  .right-controls a{
+  .right-controls a {
     padding-left: 5%;
     padding: 0.5em 1em;
-    font-size: 1.3rem;      
+    font-size: 1.3rem;
   }
-  .region-btn{
+  .region-btn {
     padding: 1% 1%;
   }
-  .region-btn img{
+  .region-btn img {
     max-width: 100%;
   }
   .body-1 img {
@@ -979,10 +968,10 @@ nav {
   nav {
     /* border: 1px solid black; */
   }
-  #main{
+  #main {
     display: none;
   }
-  .sidenav{
+  .sidenav {
     display: none;
   }
   .body-1 img {
@@ -1108,6 +1097,3 @@ nav {
     max-width: 90%;
   }
 }
-
-
-

@@ -88,7 +88,6 @@ div {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  
 }
 .header {
   margin: auto;
@@ -98,7 +97,6 @@ div {
   margin: auto;
   max-width: 70%;
 }
-
 
 .column {
   float: left;
@@ -130,7 +128,6 @@ div {
   display: inline-block;
 }
 
-
 .row:after {
   content: "";
   display: table;
@@ -147,7 +144,7 @@ div {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  z-index: 9999; 
+  z-index: 9999;
   display: none;
 }
 
@@ -190,12 +187,11 @@ div {
   transition: margin-right 0.5s;
   padding: 16px;
   display: none;
-  
 }
-#main img{
+#main img {
   float: left;
 }
-#main button{
+#main button {
   float: right;
 }
 
@@ -232,13 +228,11 @@ div {
   cursor: pointer;
 }
 
-
 .main {
   margin-left: 200px;
-  font-size: 20px; 
+  font-size: 20px;
   padding: 0px 10px;
 }
-
 
 .active {
   background-color: rgb(162, 156, 255);
@@ -251,7 +245,6 @@ div {
   padding-left: 8px;
   color: #000000;
 }
-
 
 .fa-caret-down {
   float: right;
@@ -268,21 +261,20 @@ div {
   gap: 1.5rem;
   padding-left: 1%;
 }
-.right-controls a{
+.right-controls a {
   color: #ffffff;
   padding: 1rem 2.3rem;
 }
 .login-btn {
   background: #6c2bd9;
   color: rgb(255, 255, 255);
-  
+
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.7rem;
 }
-.login-btn:hover{
-
+.login-btn:hover {
 }
 
 .region-dropdown {
@@ -300,7 +292,7 @@ div {
   cursor: pointer;
 }
 
-.region-btn img{
+.region-btn img {
   width: 40px;
   height: 1px;
 }
@@ -365,7 +357,7 @@ div {
   width: 90%;
 }
 .body div:nth-child(1) {
-  padding-top: 5%;
+
 }
 .img {
   display: flex;
@@ -404,6 +396,7 @@ div {
   padding-top: 5%;
   display: flex;
   margin: auto;
+  justify-content: center;
   flex-direction: row;
   gap: 5%;
   width: 90%;
@@ -421,14 +414,20 @@ a {
   display: flex;
   justify-content: center;
   padding-top: 3%;
+  color: white;
+}
+.login a{
+  text-decoration: none;
+  color: white;
 }
 .login button {
+  text-decoration: none;
   border: none;
   background-color: #6a35ff;
   border-radius: 10px;
-  color: white;
   padding: 5% 42%;
   font-size: 2rem;
+  color: white;
 }
 .appear {
   display: none;
@@ -525,7 +524,7 @@ a {
   .navbar {
     display: none;
   }
-  #main{
+  #main {
     margin-top: 0;
     padding-bottom: 5%;
     display: flex;
@@ -533,8 +532,7 @@ a {
     justify-content: space-between;
     /* border: 1px solid blue; */
   }
-  #main button{
-    
+  #main button {
     margin-top: 0;
     float: right;
     background-color: transparent;
@@ -542,17 +540,17 @@ a {
     font-weight: bold;
     font-size: 2rem;
   }
-  #main img{
+  #main img {
     height: 4vh;
     float: left;
     margin-bottom: 0;
     z-index: 1;
   }
-  .sidebar{
-   display: block;
-   width: 0;
+  .sidebar {
+    display: block;
+    width: 0;
   }
-  
+
   .body {
     display: flex;
     flex-direction: column;
@@ -582,6 +580,9 @@ a {
     justify-content: center;
     max-width: 50%;
   }
+  .store img {
+    
+  }
   .appear {
     display: block;
   }
@@ -592,13 +593,19 @@ a {
     width: 100%;
     height: 4vh;
   }
+  .login a {
+    font-size: 3rem;
+  }
   .thin div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 90%;
   }
   .img-end {
-    border: 1px solid black;
+    margin: auto;
+    /* border: 1px solid black; */
+  }
+  .img-end div img{
   }
   .thin h1 {
     font-size: 2rem;
@@ -612,7 +619,7 @@ a {
     height: fit-content;
   }
   .ending div {
-    max-width: 60%;
+    max-width: 40%;
   }
   .ending img {
     height: 4vh;
@@ -622,11 +629,11 @@ a {
     max-width: 90%;
   }
 }
-@media (770px <= width <= 1023px) {
+@media (769px <= width <= 1023px) {
   .navbar {
     display: none;
   }
-  #main{
+  #main {
     margin-top: 0;
     padding-bottom: 5%;
     display: flex;
@@ -634,8 +641,7 @@ a {
     justify-content: space-between;
     /* border: 1px solid blue; */
   }
-  #main button{
-    
+  #main button {
     margin-top: 0;
     float: right;
     background-color: transparent;
@@ -643,15 +649,15 @@ a {
     font-weight: bold;
     font-size: 2rem;
   }
-  #main img{
+  #main img {
     height: 4vh;
     float: left;
     margin-bottom: 0;
     z-index: 1;
   }
-  .sidebar{
-   display: block;
-   width: 0;
+  .sidebar {
+    display: block;
+    width: 0;
   }
   .body {
     max-width: 100%;
@@ -719,10 +725,10 @@ a {
   }
 }
 @media (1024px <= width <= 1400px) {
-    #main{
+  #main {
     display: none;
   }
-  .sidenav{
+  .sidenav {
     display: none;
   }
 

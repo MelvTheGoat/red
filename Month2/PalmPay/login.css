@@ -89,6 +89,11 @@ input {
 .right a {
   text-decoration: none;
 }
+.foot{
+  color: #87909d;
+  text-align: center;
+  padding-top: 10%;
+}
 @media (0px <= width <= 768px) {
   .left {
     display: none;
