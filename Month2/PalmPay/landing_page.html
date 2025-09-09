@@ -79,23 +79,23 @@
             <div class="row">
               <div class="column">
                 <h5>Terminals</h5>
-                <h3>POS</h3>
+                <h3><a href="">POS</a></h3>
                 <p>Accept payments with POS terminal</p>
-                <h3>Pay with Transfer</h3>
+                <h3><a href="">Pay with Transfer</a></h3>
                 <p>Open Transfer Account in minutes</p>
               </div>
               <div class="column">
                 <h5>Payment</h5>
-                <h3>Payin</h3>
+                <h3><a href="./payin.html">Payin</a></h3>
                 <p>A single platform to accept payments</p>
-                <h3>Payout</h3>
+                <h3><a href="">Payout</a></h3>
                 <p>Send payouts in real time</p>
               </div>
 
               <div class="column">
-                <h3>Send and Receive Money</h3>
+                <h3><a href="">Send and Receive Money</a></h3>
                 <p>Make transfer or get paid</p>
-                <h3>Management</h3>
+                <h3><a href="">Management</a></h3>
                 <p>One-stop management suite</p>
               </div>
               <div class="column">
@@ -266,6 +266,18 @@
             } else {
               dropdownContent.style.display = "block";
             }
+          });
+          document.querySelectorAll(".dropdown").forEach((dropdown) => {
+            dropdown.addEventListener("mouseenter", () => {
+              document
+                .querySelector(".main-content")
+                .classList.add("page-blur");
+            });
+            dropdown.addEventListener("mouseleave", () => {
+              document
+                .querySelector(".main-content")
+                .classList.remove("page-blur");
+            });
           });
         }
       </script>

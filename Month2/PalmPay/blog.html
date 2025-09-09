@@ -277,10 +277,20 @@
                 dropdownContent.style.display = "block";
               }
             });
+            document.querySelectorAll(".dropdown").forEach((dropdown) => {
+  dropdown.addEventListener("mouseenter", () => {
+    document.querySelector(".main-content").classList.add("page-blur");
+  });
+  dropdown.addEventListener("mouseleave", () => {
+    document.querySelector(".main-content").classList.remove("page-blur");
+  });
+});
+
           }
         </script>
       </section>
-    <section>
+      <section class="main-content">
+            <section>
       <div class="top">
         <h1>PalmPay Blog</h1>
         <p>
@@ -417,6 +427,8 @@
             </p>
           </div>
         </section>
+
+      </section>
 
 </body>
 </html>

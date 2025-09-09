@@ -278,196 +278,211 @@
                 dropdownContent.style.display = "block";
               }
             });
+            document.querySelectorAll(".dropdown").forEach((dropdown) => {
+              dropdown.addEventListener("mouseenter", () => {
+                document
+                  .querySelector(".main-content")
+                  .classList.add("page-blur");
+              });
+              dropdown.addEventListener("mouseleave", () => {
+                document
+                  .querySelector(".main-content")
+                  .classList.remove("page-blur");
+              });
+            });
           }
         </script>
       </section>
-      <section class="top">
-        <h1>Unlock seamless <br />payment acceptance</h1>
-        <p>
-          Enable online and in-person transactions, expand across borders, and
-          effortlessly embrace emerging payment methods, all in one platform.
-        </p>
-        <button>Get Started</button>
-      </section>
-      <section class="top-card">
-        <div>
-          <h1>Simplify payments for business success</h1>
+      <section class="main-content">
+        <section class="top">
+          <h1>Unlock seamless <br />payment acceptance</h1>
           <p>
-            All-in-one platform for accepting and processing payments across all
-            sales channels.
+            Enable online and in-person transactions, expand across borders, and
+            effortlessly embrace emerging payment methods, all in one platform.
           </p>
-        </div>
-        <div>
-          <h1>Payment methods your customers prefer</h1>
-          <p>
-            Unleash market expansion and customer outreach. Seamlessly integrate
-            all payment methods with a single integration.
-          </p>
-        </div>
-        <div>
-          <h1>Optimize your revenue and conversion rate</h1>
-          <p>
-            Protect your business from fraud and increase authorization rates on
-            every payment
-          </p>
-        </div>
-      </section>
-      <section class="card">
-        <div class="help-all">
-          <section class="help">
-            <div>
-              <h1>Get paid in-person with ease</h1>
-              <p>
-                Seamlessly accept card and bank transfer payments using PalmPay
-                POS, and supercharge your achievements with "Pay With Transfer"
-                - fast, secure transactions and unparalleled customer
-                convenience. Elevate your business game today!
-              </p>
-            </div>
-            <img src="../PalmPay/palm/WithEase.bd40dbb5.png" alt="" />
-          </section>
-        </div>
+          <button>Get Started</button>
+        </section>
+        <section class="top-card">
+          <div>
+            <h1>Simplify payments for business success</h1>
+            <p>
+              All-in-one platform for accepting and processing payments across
+              all sales channels.
+            </p>
+          </div>
+          <div>
+            <h1>Payment methods your customers prefer</h1>
+            <p>
+              Unleash market expansion and customer outreach. Seamlessly
+              integrate all payment methods with a single integration.
+            </p>
+          </div>
+          <div>
+            <h1>Optimize your revenue and conversion rate</h1>
+            <p>
+              Protect your business from fraud and increase authorization rates
+              on every payment
+            </p>
+          </div>
+        </section>
+        <section class="card">
+          <div class="help-all">
+            <section class="help">
+              <div>
+                <h1>Get paid in-person with ease</h1>
+                <p>
+                  Seamlessly accept card and bank transfer payments using
+                  PalmPay POS, and supercharge your achievements with "Pay With
+                  Transfer" - fast, secure transactions and unparalleled
+                  customer convenience. Elevate your business game today!
+                </p>
+              </div>
+              <img src="../PalmPay/palm/WithEase.bd40dbb5.png" alt="" />
+            </section>
+          </div>
 
-        <div class="privacy-all">
-          <section class="privacy">
-            <img src="../PalmPay/palm/OnlinePayments.301b795c.png" alt="" />
+          <div class="privacy-all">
+            <section class="privacy">
+              <img src="../PalmPay/palm/OnlinePayments.301b795c.png" alt="" />
 
-            <div>
-              <h1>Online payments built for success</h1>
-              <p>
-                Level up your business with the ease of online payments,
-                accelerating transaction efficiency, and creating ecstatic
-                customers. Seamlessly receive payments from any Nigerian bank,
-                establishing your supremacy in payment acceptance - all in the
-                PalmPay Business app.
-              </p>
-              <br />
-            </div>
-          </section>
-        </div>
-      </section>
-      <section class="mid">
-        <h1>Tailored APIs for your complex needs</h1>
-        <p>
-          Choose tailor-made APIs solutions for your payment needs. Your smooth
-          transactions are our priority.
-        </p>
-        <div class="mid-card">
-          <div class="grid1">
-            <div class="grid1-box">
-              <h1>Connect</h1>
-              <p>Integrate payments with ease using our SDK/API.</p>
-            </div>
-            <div class="grid1-box">
-              <h1>Bulk Biller Payment</h1>
-              <p>Manage batch transactions through a dedicated API.</p>
-            </div>
-            <div class="grid1-box">
-              <h1>Bulk Transaction</h1>
-              <p>Effortlessly execute bulk transfers via API.</p>
-            </div>
+              <div>
+                <h1>Online payments built for success</h1>
+                <p>
+                  Level up your business with the ease of online payments,
+                  accelerating transaction efficiency, and creating ecstatic
+                  customers. Seamlessly receive payments from any Nigerian bank,
+                  establishing your supremacy in payment acceptance - all in the
+                  PalmPay Business app.
+                </p>
+                <br />
+              </div>
+            </section>
           </div>
-          <div class="grid2">
-            <div class="grid2-box">
-              <h1>Collection</h1>
-              <p>
-                Simplify direct debit and proxy payments for salaries or fees.
-              </p>
+        </section>
+        <section class="mid">
+          <h1>Tailored APIs for your complex needs</h1>
+          <p>
+            Choose tailor-made APIs solutions for your payment needs. Your
+            smooth transactions are our priority.
+          </p>
+          <div class="mid-card">
+            <div class="grid1">
+              <div class="grid1-box">
+                <h1>Connect</h1>
+                <p>Integrate payments with ease using our SDK/API.</p>
+              </div>
+              <div class="grid1-box">
+                <h1>Bulk Biller Payment</h1>
+                <p>Manage batch transactions through a dedicated API.</p>
+              </div>
+              <div class="grid1-box">
+                <h1>Bulk Transaction</h1>
+                <p>Effortlessly execute bulk transfers via API.</p>
+              </div>
             </div>
-            <div class="grid2-box">
-              <h1>Pay with Bank Transfer</h1>
-              <p>
-                Experience temporary accounts for online payments (30-minute
-                validity).
-              </p>
-            </div>
-            <div class="grid2-box">
-              <h1>Pay with Wallet</h1>
-              <p>Enjoy convenient wallet-based transactions.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="mid-end">
-        <h1>Manage the devices and payment all in one dashboard</h1>
-        <p>
-          PalmPay offers a comprehensive Dashboard for business to better
-          administration, monitor all your payment processing, and manage all
-          the POS devices, in one place.
-        </p>
-        <img src="./palm/Transactions.png" alt="" />
-      </section>
-      <section class="thin">
-        <div class="img-end">
-          <h1>Start accepting payments with <br />PalmPay today</h1>
-          <div>
-            <button>Get Started</button>
-          </div>
-        </div>
-      </section>
-      <section class="end-whole">
-        <section class="ending">
-          <div>
-            <img src="./palm/logoLight.c6470eab.png" alt="" />
-            <img src="../PalmPay/palm/centralBank.e14647d7.png" alt="" />
-            <img src="./palm/PCI.61c854da.png" alt="" />
-            <img src="./palm/NDIC.2b6dc455.png" alt="" />
-            <img src="./palm/NDPC.5e0c1fc1.png" alt="" />
-            <img src="./palm/fccpc.f0d93ef3.png" alt="" />
-            <p>© 2025 PalmPay. All rights reserved.</p>
-          </div>
-          <div>
-            <h1>Personal</h1>
-            <p>PalmPay App</p>
-            <p>Send and Receive Money</p>
-            <p>Bill Payment</p>
-            <p>Buy and Shop</p>
-          </div>
-          <div>
-            <h1>Business</h1>
-            <p>Payin</p>
-            <p>Payout</p>
-            <p>POS</p>
-            <p>Pay with Transfer</p>
-            <p>Business Account</p>
-            <p>Management</p>
-            <p>Agent Network</p>
-          </div>
-          <div>
-            <h1>Company</h1>
-            <p>About</p>
-            <p>Blog</p>
-            <p>Press and Media</p>
-            <p>Contact</p>
-          </div>
-          <div>
-            <h1>Legal</h1>
-            <p>Privacy Policy</p>
-            <p>Terms & Conditions</p>
-            <p>Complaints</p>
-            <p>Loan Privacy Policy</p>
-            <div>
-              <img src="./palm/Instagram.402c19f4.png" alt="" />
-              <img src="./palm/Facebook.994376ce.png" alt="" />
-              <img src="./palm/XCorp.24c83d0b.png" alt="" />
-              <img src="./palm/Instagram.402c19f4.png" alt="" />
+            <div class="grid2">
+              <div class="grid2-box">
+                <h1>Collection</h1>
+                <p>
+                  Simplify direct debit and proxy payments for salaries or fees.
+                </p>
+              </div>
+              <div class="grid2-box">
+                <h1>Pay with Bank Transfer</h1>
+                <p>
+                  Experience temporary accounts for online payments (30-minute
+                  validity).
+                </p>
+              </div>
+              <div class="grid2-box">
+                <h1>Pay with Wallet</h1>
+                <p>Enjoy convenient wallet-based transactions.</p>
+              </div>
             </div>
           </div>
         </section>
-        <section class="end-bottom">
-          <div>
-            <p>
-              PalmPay is a financial service provided by PalmPay Limited,
-              licensed and regulated by the Central Bank of Nigeria (CBN).
-              Deposits are insured by the Nigerian Deposit Insurance Corporation
-              (NDIC). Loan services on PalmPay are provided by Flexi
-              Microfinance Bank Limited, licensed by the Central Bank of Nigeria
-              (CBN). We empower individuals and businesses with payments
-              solutions, high-yield investment opportunities, and easy-to-use
-              tools for financial management. We are a global company with a
-              presence in Nigeria, Ghana, Tanzania, and the United Kingdom.
-            </p>
+        <section class="mid-end">
+          <h1>Manage the devices and payment all in one dashboard</h1>
+          <p>
+            PalmPay offers a comprehensive Dashboard for business to better
+            administration, monitor all your payment processing, and manage all
+            the POS devices, in one place.
+          </p>
+          <img src="./palm/Transactions.png" alt="" />
+        </section>
+        <section class="thin">
+          <div class="img-end">
+            <h1>Start accepting payments with <br />PalmPay today</h1>
+            <div>
+              <button>Get Started</button>
+            </div>
           </div>
+        </section>
+        <section class="end-whole">
+          <section class="ending">
+            <div>
+              <img src="./palm/logoLight.c6470eab.png" alt="" />
+              <img src="../PalmPay/palm/centralBank.e14647d7.png" alt="" />
+              <img src="./palm/PCI.61c854da.png" alt="" />
+              <img src="./palm/NDIC.2b6dc455.png" alt="" />
+              <img src="./palm/NDPC.5e0c1fc1.png" alt="" />
+              <img src="./palm/fccpc.f0d93ef3.png" alt="" />
+              <p>© 2025 PalmPay. All rights reserved.</p>
+            </div>
+            <div>
+              <h1>Personal</h1>
+              <p>PalmPay App</p>
+              <p>Send and Receive Money</p>
+              <p>Bill Payment</p>
+              <p>Buy and Shop</p>
+            </div>
+            <div>
+              <h1>Business</h1>
+              <p>Payin</p>
+              <p>Payout</p>
+              <p>POS</p>
+              <p>Pay with Transfer</p>
+              <p>Business Account</p>
+              <p>Management</p>
+              <p>Agent Network</p>
+            </div>
+            <div>
+              <h1>Company</h1>
+              <p>About</p>
+              <p>Blog</p>
+              <p>Press and Media</p>
+              <p>Contact</p>
+            </div>
+            <div>
+              <h1>Legal</h1>
+              <p>Privacy Policy</p>
+              <p>Terms & Conditions</p>
+              <p>Complaints</p>
+              <p>Loan Privacy Policy</p>
+              <div>
+                <img src="./palm/Instagram.402c19f4.png" alt="" />
+                <img src="./palm/Facebook.994376ce.png" alt="" />
+                <img src="./palm/XCorp.24c83d0b.png" alt="" />
+                <img src="./palm/Instagram.402c19f4.png" alt="" />
+              </div>
+            </div>
+          </section>
+          <section class="end-bottom">
+            <div>
+              <p>
+                PalmPay is a financial service provided by PalmPay Limited,
+                licensed and regulated by the Central Bank of Nigeria (CBN).
+                Deposits are insured by the Nigerian Deposit Insurance
+                Corporation (NDIC). Loan services on PalmPay are provided by
+                Flexi Microfinance Bank Limited, licensed by the Central Bank of
+                Nigeria (CBN). We empower individuals and businesses with
+                payments solutions, high-yield investment opportunities, and
+                easy-to-use tools for financial management. We are a global
+                company with a presence in Nigeria, Ghana, Tanzania, and the
+                United Kingdom.
+              </p>
+            </div>
+          </section>
         </section>
       </section>
     </section>

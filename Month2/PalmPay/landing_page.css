@@ -9,8 +9,12 @@ nav {
 }
 .mega {
   margin: auto;
-  background-color: ;
+  background-color: white;
   cursor: pointer;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 999999;
 }
 .navbar {
   /* border: 1px solid red; */
@@ -21,8 +25,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0;
+
   z-index: 999;
 }
 .navbar ul {
@@ -79,6 +82,7 @@ nav {
   width: 100%;
   left: 0;
   z-index: 1;
+  padding: 2%;
 }
 
 .dropdown-content .header {
@@ -644,6 +648,20 @@ nav {
   margin-bottom: 0;
   padding-bottom: 2%;
 }
+.page-blur {
+  filter: blur(12px);
+  pointer-events: none;
+}
+.dropdown-content .row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.dropdown-content .column {
+  margin: 0;
+  padding: 0 10px;
+}
 
 @media (0px <= width <= 767px) {
   section,
@@ -651,10 +669,13 @@ nav {
   nav {
     /* border: 1px solid black; */
   }
+
   .navbar {
     display: none;
   }
   #main {
+    top: 0;
+    position: sticky;
     margin-top: 0;
     padding-bottom: 5%;
     display: flex;
@@ -671,7 +692,7 @@ nav {
     font-size: 2rem;
   }
   #main img {
-    height: 4vh;
+    height: 3vh;
     float: left;
     margin-bottom: 0;
     z-index: 1;
@@ -805,6 +826,11 @@ nav {
   div,
   nav {
     /* border: 1px solid black; */
+  }
+  .mega {
+    padding: 1.5%;
+    top: 0;
+    position: sticky;
   }
   .head {
     max-width: 95%;
@@ -962,7 +988,7 @@ nav {
     max-width: 90%;
   }
 }
-@media (1021px <= width <= 1400px) {
+@media (1021px <= width <= 1440px) {
   section,
   div,
   nav {

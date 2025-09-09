@@ -8,8 +8,12 @@ div {
 }
 .mega {
   margin: auto;
-  background-color: ;
+  background-color: white;
   cursor: pointer;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 999999;
 }
 .navbar {
   /* border: 1px solid red; */
@@ -357,7 +361,6 @@ div {
   width: 90%;
 }
 .body div:nth-child(1) {
-
 }
 .img {
   display: flex;
@@ -416,7 +419,7 @@ a {
   padding-top: 3%;
   color: white;
 }
-.login a{
+.login a {
   text-decoration: none;
   color: white;
 }
@@ -520,11 +523,30 @@ a {
   flex-direction: row;
   gap: 4%;
 }
+.page-blur {
+  filter: blur(12px);
+  pointer-events: none;
+}
+.dropdown-content .row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.dropdown-content .column {
+  margin: 0;
+  padding: 0 10px;
+}
+.dropdown-content {
+  padding: 2%;
+}
 @media (0px <= width <= 768px) {
   .navbar {
     display: none;
   }
   #main {
+    top: 0;
+    position: sticky;
     margin-top: 0;
     padding-bottom: 5%;
     display: flex;
@@ -581,7 +603,6 @@ a {
     max-width: 50%;
   }
   .store img {
-    
   }
   .appear {
     display: block;
@@ -598,19 +619,27 @@ a {
   }
   .thin div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 90%;
   }
   .img-end {
     margin: auto;
     /* border: 1px solid black; */
   }
-  .img-end div img{
+  .img-end div {
+    display: flex;
+    flex-direction: row;
+  }
+  .img-end img {
+    height: 4vh;
+  }
+  .img-end div img {
   }
   .thin h1 {
     font-size: 2rem;
   }
   .ending {
+    padding-top: 4%;
     max-width: 90%;
     display: flex;
     flex-direction: column;
@@ -724,7 +753,7 @@ a {
     height: 5%;
   }
 }
-@media (1024px <= width <= 1400px) {
+@media (1024px <= width <= 1440px) {
   #main {
     display: none;
   }

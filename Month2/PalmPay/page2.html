@@ -277,10 +277,20 @@
                 dropdownContent.style.display = "block";
               }
             });
+            document.querySelectorAll(".dropdown").forEach((dropdown) => {
+  dropdown.addEventListener("mouseenter", () => {
+    document.querySelector(".main-content").classList.add("page-blur");
+  });
+  dropdown.addEventListener("mouseleave", () => {
+    document.querySelector(".main-content").classList.remove("page-blur");
+  });
+});
+
           }
         </script>
       </section>
-    <section class="body">
+      <section class="main-content">
+            <section class="body">
       <div class="body-in">
         <div class="img">
           <img src="../PalmPay/palm/PalmPayApp-PC85c68696-b10d-43.png" alt="" />
@@ -422,6 +432,8 @@
             </p>
           </div>
         </section>
+      </section>
+
       </section>
   </body>
 </html>
