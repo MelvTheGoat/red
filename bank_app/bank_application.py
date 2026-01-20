@@ -324,22 +324,3 @@ def main_menu():
 
 
 main_menu()
-
-
-# (1, 'fred', 'fred', '701a30c567addeffb1f43e519c92cd0098f1694bee5c3225d019bac03dc1de96', '14030609', 500000, 547000.0, '2025-10-30 12:05:10')
-# (2, 'frank', 'frank', '701a30c567addeffb1f43e519c92cd0098f1694bee5c3225d019bac03dc1de96', '15238209', 500000, 10470000.0, '2025-10-30 12:06:40')
-# (3, 'oladeji femi', 'femi123', '701a30c567addeffb1f43e519c92cd0098f1694bee5c3225d019bac03dc1de96', '11143858', 1000000, 1238200.0, '2025-10-30 12:50:27')
-# (4, 'Mayungbo', 'MelvTheGoat', '701a30c567addeffb1f43e519c92cd0098f1694bee5c3225d019bac03dc1de96', '15117192', 700000, 1170000.0, '2025-11-03 10:53:41')
-
-# import sqlite3
-
-# conn = sqlite3.connect('Bank_detai.db')
-# cursor = conn.cursor()
-
-# cursor.execute("SELECT * FROM bank_details")
-# rows = cursor.fetchall()
-
-# for row in rows:
-#     print(row)
-
-# conn.close()
